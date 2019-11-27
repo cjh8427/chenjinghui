@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>视频</title>
+    <style>
+        *{margin:0; padding: 0;box-sizing: border-box;}
+        .layout-content{width:100%; height:100%;}
+        .search-container{background-color: #e6e6ec; border: 1px solid #c0c1d8; padding: 0 10px;}
+        .search-form{box-sizing: border-box;}
+        .form-item{display: inline-block;vertical-align: top;margin: 5px}
+        .form-label{text-align: right;vertical-align: middle;float: left;font-size: 14px;color: #454545;line-height: 1;padding: 10px 12px 10px 0;box-sizing: border-box;}
+        .form-input{display: inline-block;height: 24px;line-height: 1.5;padding: 1px 7px;font-size: 14px;border: 1px solid #c0c1d8;border-radius: 3px;color: #454545;background-color: #fff;position: relative;cursor: text;transition: border .2s ease-in-out,background .2s ease-in-out,box-shadow .2s ease-in-out;}
+        .form-btn{padding: 2px 7px;font-size: 14px;border-radius: 3px;transform: translateZ(0);transition: color .2s linear,background-color .2s linear,border .2s linear; touch-action: manipulation;cursor: pointer;background-image: none;border: 1px solid transparent;white-space: nowrap;line-height: 1.5;    display: inline-block;margin-bottom: 0;font-weight: 400;text-align: center;vertical-align: middle;}
+        .form-btn-info{color: #fff;background-color: #2db7f5;border-color: #2db7f5;}
+
+        .layout-video-container{background-color: #e6e6ec; border: 1px solid #c0c1d8; padding: 0 10px;}
+        .video-container{width: 100%;height: calc(100% - 45px);}
+        .video-box{width:50%;float: left;flex: 0 0 auto;padding: 5px}
+        .video-box-li{width: 100%;height: 100%;background: #333;z-index: 1;}
+        .video-item{height: inherit;width:inherit}
+    </style>
+</head>
+<body>
+<script src="../js/libs/jquery-1.9.1.min.js"></script>
+<script src="../js/libs/wfs.js"></script>
+<div class="layout-content">
+    <!--查询-->
+    <div class="search-container">
+        <form class="search-form">
+            <div class="form-item">
+                <label for="vehicleNo" class="form-label">车牌号</label>
+                <input type="text" class="form-input" id="vehicleNo" name="vehicleNo" />
+            </div>
+            <div class="form-item">
+                <button type="button" class="form-btn form-btn-info" onclick="changetext()">查询</button>
+            </div>
+        </form>
+    </div>
+    <!--页面主体-->
+    <div class="layout-video-container">
+        <ul class="video-container">
+            <!--<li class="video-box">-->
+                <!--<div class="video-box-li">-->
+                    <!--<video class="video-item" controls autoplay id="017907130213_1"></video>-->
+                <!--</div>-->
+            <!--</li>-->
+            <!--<div class="video-box">-->
+                <!--<div class="video-box-li">-->
+                    <!--<video src="" class="video-item" controls autoplay></video>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="video-box">-->
+                <!--<div class="video-box-li">-->
+                    <!--<video src="" class="video-item" controls autoplay></video>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="video-box">-->
+                <!--<div class="video-box-li">-->
+                    <!--<video src="" class="video-item" controls autoplay></video>-->
+                <!--</div>-->
+            <!--</div>-->
+        </ul>
+    </div>
+</div>
+<script language="javascript" type="text/javascript">
+    // 全局变量
+    var cUrl = null,
+        oWinUrl = null,
+        // videoUrl = 'http://192.168.1.244:30000/base/video',
+        // searchVideoUrl = 'http://192.168.1.244:30000/instructionRelease/getVehDetailByVehNo',
+        videoUrl = 'http://api.bdlbs.comlbs.com/base/video',
+        searchVideoUrl = 'http://api.bdlbs.comlbs.com/instructionRelease/getVehDetailByVehNo',
+        UserId = JSON.parse(localStorage.getItem('$userstatus')).id,
+        wHeight = null,
+        searchHeight = null,
+        videoContainerHeight = null,
+        videoUl = null,
+        videoItem = null
+
+    var changetext = function(){
+        var searchVehicleNo = document.getElementById('vehicleNo').value
+        if(!searchVehicleNo){return}
+        getVehicleData(searchVehicleNo)
+    }
+
+    var getVehicleData = function(oData){
+        var oParams = {
+            vehicleNo: oData
+        }
+        $.ajax({
+            type: "post",
+            url: searchVideoUrl,
+            data: JSON.stringify(oParams),
+            dataType: "json",
+            headers: {
+                token: oWinUrl.token,
+                "Content-Type": 'application/json; charset=utf-8'
+            },
+            success: function(oData){
+                if(oData.code == 1){
+                    if(oData.detail.cameraNo){
+                        oWinUrl.PhoneNum = oData.detail.deviceNo
+                        oWinUrl.cameraNum = oData.detail.cameraNo
+                        initPage(oWinUrl.cameraNum)
+                        initCamera(oWinUrl.cameraNum)
+                    }
+                }else{
+                    alert('未查询到车辆视频信息！')
+                    return
+                }
+            },
+            error: function(){
+                alert('未查询到车辆视频信息！')
+            }
+        });
+    }
+
+
+    // 获取地址的参数
+    var getArgs = function (cUrl) {
+        var query = location.search.substring(1);
+        if (!cUrl) {
+            query = cUrl;
+        }
+        var args = {};
+        var pairs = query.split('&');
+        for (var i = 0; i < pairs.length; i++) {
+            var pos = pairs[i].indexOf('=');
+            if (pos === -1) {
+                continue;
+            }
+            var argname = pairs[i].substring(0, pos);
+            var value = pairs[i].substring(pos + 1);
+            value = decodeURIComponent(value);
+            args[argname] = value;
+        }
+        return args;
+    }
+
+    // 下发视频指令
+    var queryVideoOrder = function (oData) {
+        var oParams = {
+            Chanel: oData.Chanel,
+            PhoneNum: oData.PhoneNum,
+            CodeType: 1,
+            IP: "61.136.223.44",
+            MediaType: 1,
+            TcpPort: 5556,
+            actiontype: "EntranceMedia"
+        }
+        $.ajax({
+            type: "post",
+            url: videoUrl,
+            data: JSON.stringify(oParams),
+            dataType: "json",
+            headers: {
+                token: oWinUrl.token,
+                "Content-Type": 'application/json; charset=utf-8'
+            },
+            success: function(data){
+                if(data.code == 1){
+                    reqVideo(oParams)
+                }
+            }
+        });
+    };
+
+    // 连接wfs请求视频
+    var reqVideo = function(oData){
+        var oWfs = new Wfs();
+        var oVideo = document.getElementById(oData.PhoneNum + '_' + oData.Chanel);
+        oWfs.attachMedia(oVideo, UserId + '_' + oData.PhoneNum + '_' + oData.Chanel);
+    };
+
+    // 页面渲染视频
+    var initPage = function(data){
+        searchHeight = document.getElementsByClassName('search-container')[0].offsetHeight
+        wHeight = window.innerHeight //窗口的高度
+        videoContainerHeight = document.getElementsByClassName('layout-video-container')[0]
+        videoUl = document.getElementsByClassName('video-container')[0]
+        var $_videoItem = ''
+        for(var i = 1; i <= parseInt(data); i++){
+            $_videoItem +=
+                '<li class="video-box">' +
+                '   <div class="video-box-li">' +
+                '       <video src="" class="video-item" autoplay id="'+oWinUrl.PhoneNum + '_' + i +'"></video>' +
+                '   </div>' +
+                '</li>'
+        }
+        videoContainerHeight.style.height = wHeight - searchHeight + 'px'
+        videoUl.innerHTML = $_videoItem
+        setTimeout(function(){
+            initVideoItem(data)
+        }, 200)
+    }
+
+    // 根据视频的个数来设置视频的宽高
+    var initVideoItem = function(data){
+        var num = parseInt(data)
+        videoItem = document.getElementsByClassName('video-box')
+        for(var k = 0; k< videoItem.length; k++){
+            videoItem[k].style.height = (wHeight - searchHeight)/2 - 10+ 'px'
+        }
+        switch (num) {
+            case 1:
+                videoItem[0].style.width = '100%'
+                videoItem[0].style.height = (wHeight - searchHeight) - 10+ 'px'
+                break
+            case 2:
+                for (var i = 0; i < videoItem.length; i++) {
+                    videoItem[i].style.width = '50%'
+                    videoItem[i].style.height = (wHeight - searchHeight) - 10+ 'px'
+                }
+                break
+            case 4:
+                for (var i = 0; i < videoItem.length; i++) {
+                    videoItem[i].style.width = '50%'
+                    videoItem[i].style.height = (wHeight - searchHeight)/2 - 10+ 'px'
+                }
+                break
+        }
+    }
+
+    var initCamera = function(oData){
+        for(let k = 1; k<=parseInt(oData); k++){
+            var vItem = document.getElementsByClassName('video-item')
+            // vItem[k - 1].setAttribute("id", oWinUrl.devNo + "_" + i)
+            oWinUrl.Chanel = k
+            queryVideoOrder(oWinUrl)
+        }
+    }
+
+
+    // 页面加载完毕
+    window.onload = function(){
+        cUrl = window.location.href;
+        oWinUrl = getArgs(cUrl);
+        if(oWinUrl.cameraNum){
+            if(oWinUrl.cameraNum > 1){
+                initPage(oWinUrl.cameraNum)
+                initCamera(oWinUrl.cameraNum)
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

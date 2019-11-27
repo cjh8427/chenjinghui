@@ -1,0 +1,475 @@
+{
+  "id": 3,
+  "title": "环境监测",
+  "pid": null,
+  "url": "/mapView",
+  "iconClass": null,
+  "children": [
+    {
+      "id": 31,
+      "title": "地图展示",
+      "pid": 3,
+      "url": "/mapView",
+      "iconClass": null,
+      "children": null
+    },
+    {
+      "id": 32,
+      "title": "报表统计",
+      "pid": 3,
+      "url": "/monitorManage/video",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 321,
+          "title": "PM2.5统计",
+          "pid": 32,
+          "url": "/stastic/vehicleStatus",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 322,
+          "title": "噪音统计",
+          "pid": 32,
+          "url": "/stastic/vehicleStatus",
+          "iconClass": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "title": "历史数据查询",
+      "pid": 3,
+      "url": "/assetsManage",
+      "iconClass": null,
+      "children": null
+    },
+    {
+      "id": 34,
+      "title": "站点管理",
+      "pid": 3,
+      "url": "/assetsManage",
+      "iconClass": null,
+      "children": null
+    },
+    {
+      "id": 35,
+      "title": "设备监控",
+      "pid": 3,
+      "url": "/assetsManage",
+      "iconClass": null,
+      "children": null
+    },
+    {
+      "id": 36,
+      "title": "短信配置",
+      "pid": 3,
+      "url": "/assetsManage",
+      "iconClass": null,
+      "children": null
+    },
+    {
+      "id": 37,
+      "title": "污染物浓度预警",
+      "pid": 3,
+      "url": "/assetsManage",
+      "iconClass": null,
+      "children": null
+    },
+    {
+      "id": 38,
+      "title": "用户管理",
+      "pid": 3,
+      "url": "/assetsManage",
+      "iconClass": null,
+      "children": null
+    }
+  ]
+},
+{
+"id": 4,
+"title": "环卫作业",
+"pid": null,
+"url": "/stastic",
+"iconClass": null,
+"children": [
+{
+"id": 41,
+"title": "智慧地图",
+"pid": 4,
+"url": "/stastic/alermDetail",
+"iconClass": null,
+"children": null
+},
+{
+"id": 42,
+"title": "运营分析",
+"pid": 4,
+"url": "/stastic/alermDetail",
+"iconClass": null,
+"children": null
+},
+{
+"id": 43,
+"title": "车辆管理",
+"pid": 4,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": [
+{
+"id": 431,
+"title": "清运车管理",
+"pid": 43,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 432,
+"title": "实时监控",
+"pid": 43,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 433,
+"title": "车辆在线",
+"pid": 43,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 434,
+"title": "历史轨迹",
+"pid": 43,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 435,
+"title": "清运监管",
+"pid": 43,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 436,
+"title": "垃圾点收运监管",
+"pid": 43,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 437,
+"title": "油耗监管",
+"pid": 43,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+}
+]
+},
+{
+"id": 44,
+"title": "车辆报警信息",
+"pid": 4,
+"url": "/stastic/mileageStastic",
+"iconClass": null,
+"children": null
+},
+{
+"id": 45,
+"title": "车辆作业统计",
+"pid": 4,
+"url": "/stastic/mileageStastic",
+"iconClass": null,
+"children": null
+},
+{
+"id": 46,
+"title": "车辆作业规划",
+"pid": 4,
+"url": "/stastic/mileageStastic",
+"iconClass": null,
+"children": null
+},
+{
+"id": 47,
+"title": "台账管理",
+"pid": 4,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": [
+{
+"id": 471,
+"title": "中转站台账",
+"pid": 47,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 472,
+"title": "人员台账管理",
+"pid": 47,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 473,
+"title": "垃圾分类台账",
+"pid": 47,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+}
+]
+}
+]
+},
+{
+"id": 5,
+"title": "建筑渣土",
+"pid": null,
+"url": "/stastic",
+"iconClass": null,
+"children": [
+{
+"id": 51,
+"title": "资质管理",
+"pid": 5,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": [
+{
+"id": 511,
+"title": "资质申报管理",
+"pid": 51,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 512,
+"title": "资质审批管理",
+"pid": 51,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 513,
+"title": "处置证核发管理",
+"pid": 51,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+}
+]
+},
+{
+"id": 52,
+"title": "基础信息管理",
+"pid": 5,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": [
+{
+"id": 521,
+"title": "企业管理",
+"pid": 52,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 522,
+"title": "车辆管理",
+"pid": 52,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 523,
+"title": "工地管理",
+"pid": 52,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 524,
+"title": "驾驶员信息管理",
+"pid": 52,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 525,
+"title": "消纳点信息管理",
+"pid": 52,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 526,
+"title": "GIS管理",
+"pid": 52,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+}
+]
+},
+{
+"id": 53,
+"title": "监管",
+"pid": 5,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": [
+{
+"id": 531,
+"title": "出口抓拍管理",
+"pid": 53,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 532,
+"title": "工地视频",
+"pid": 53,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 533,
+"title": "消纳点视频",
+"pid": 53,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 534,
+"title": "身份识别",
+"pid": 53,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+}
+]
+},
+{
+"id": 54,
+"title": "运输过程监管",
+"pid": 5,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": [
+{
+"id": 541,
+"title": "电子围栏管理",
+"pid": 54,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 542,
+"title": "作业全过程监控",
+"pid": 51,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 543,
+"title": "违规作业报警统计",
+"pid": 54,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 544,
+"title": "道路卡口管理",
+"pid": 54,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 545,
+"title": "智能考评管理",
+"pid": 54,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 546,
+"title": "智能对接管理",
+"pid": 54,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+}
+]
+},
+{
+"id": 55,
+"title": "巡查处理",
+"pid": 5,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": [
+{
+"id": 551,
+"title": "自助巡查",
+"pid": 55,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 552,
+"title": "处置点巡查",
+"pid": 55,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 553,
+"title": "车辆巡查",
+"pid": 55,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+},
+{
+"id": 554,
+"title": "其他问题巡查",
+"pid": 55,
+"url": "/stastic/vehicleStatus",
+"iconClass": null,
+"children": null
+}
+]
+}
+]
+},

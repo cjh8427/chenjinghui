@@ -1,0 +1,511 @@
+﻿{
+  "code": 1,
+  "detail":[{
+    "id": 92,
+    "text": "太原市",
+    "pid": null,
+    "opened": true,
+    "data": null,
+    "children": [{
+      "id": 93,
+      "text": "杏花岭区",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A12378",
+        "pid": 93,
+        "opened": false,
+        "data": {
+          "dev_no": "013033332222"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A79827",
+        "pid": 93,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100022"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 94,
+      "text": "迎泽区",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A79802",
+        "pid": 94,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100023"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A68097",
+        "pid": 94,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100196"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A79572",
+        "pid": 94,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100078"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A79527",
+        "pid": 94,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100018"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 95,
+      "text": "小店区",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A68017",
+        "pid": 95,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100027"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A79810",
+        "pid": 95,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100095"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 96,
+      "text": "尖草坪区",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A78056",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100075"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A79570",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100058"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A68050",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100026"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A78806",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100011"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A68087",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100025"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A68057",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100021"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9583",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100007"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA8788",
+        "pid": 96,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100096"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 97,
+      "text": "万柏林区",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋AA8642",
+        "pid": 97,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100090"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9563",
+        "pid": 97,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100016"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA8789",
+        "pid": 97,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100031"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA8632",
+        "pid": 97,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100099"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9590",
+        "pid": 97,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100054"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 98,
+      "text": "晋源区",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋AA9592",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100013"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9587",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100076"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA7143",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100032"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9562",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100004"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9773",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100012"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9573",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100081"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7380",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100028"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7308",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100006"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7320",
+        "pid": 98,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100052"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 99,
+      "text": "清徐县",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋AB7381",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100060"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7395",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100098"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7359",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100014"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7350",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100030"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7316",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100051"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AB7306",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100082"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9579",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100089"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋AA9673",
+        "pid": 99,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100039"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 100,
+      "text": "阳曲县",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A16977",
+        "pid": 100,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100064"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A16807",
+        "pid": 100,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100063"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A19209",
+        "pid": 100,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100074"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A19443",
+        "pid": 100,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100092"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 101,
+      "text": "娄烦县",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A18658",
+        "pid": 101,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100057"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A19671",
+        "pid": 101,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100085"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 102,
+      "text": "五峰",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A19513",
+        "pid": 102,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100055"
+        },
+        "children": null
+      }, {
+        "id": null,
+        "text": "晋A19303",
+        "pid": 102,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100072"
+        },
+        "children": null
+      }]
+    }, {
+      "id": 103,
+      "text": "古交市",
+      "pid": 92,
+      "opened": false,
+      "data": null,
+      "children": [{
+        "id": null,
+        "text": "晋A17621",
+        "pid": 103,
+        "opened": false,
+        "data": {
+          "dev_no": "018080100097"
+        },
+        "children": null
+      }]
+    }]
+  }]
+}

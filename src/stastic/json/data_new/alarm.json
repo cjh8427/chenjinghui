@@ -1,0 +1,2381 @@
+{
+  "code": 1,
+  "error": null,
+  "msg": "查询成功",
+  "detail": {
+    "pageNum": 1,
+    "pageSize": 15,
+    "size": 13,
+    "startRow": 1,
+    "endRow": 13,
+    "total": 13,
+    "pages": 1,
+    "list": [
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540879499,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540880699,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 14:04:59",
+        "EndAlarmTime": "2018-10-30 14:24:59"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 15.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540878599,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540879499,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 13:49:59",
+        "EndAlarmTime": "2018-10-30 14:04:59"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540877399,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540878599,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 13:29:59",
+        "EndAlarmTime": "2018-10-30 13:49:59"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540875899,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540877099,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 13:04:59",
+        "EndAlarmTime": "2018-10-30 13:24:59"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 5.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540875300,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540875600,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 12:55:00",
+        "EndAlarmTime": "2018-10-30 13:00:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540873800,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540875000,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 12:30:00",
+        "EndAlarmTime": "2018-10-30 12:50:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 15.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540872600,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540873500,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 12:10:00",
+        "EndAlarmTime": "2018-10-30 12:25:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540871100,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540872300,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 11:45:00",
+        "EndAlarmTime": "2018-10-30 12:05:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540869900,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540871100,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 11:25:00",
+        "EndAlarmTime": "2018-10-30 11:45:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 15.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540868700,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540869600,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 11:05:00",
+        "EndAlarmTime": "2018-10-30 11:20:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540867200,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540868400,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 10:40:00",
+        "EndAlarmTime": "2018-10-30 11:00:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540865700,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540866900,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 10:15:00",
+        "EndAlarmTime": "2018-10-30 10:35:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 15.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540864500,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540865400,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 09:55:00",
+        "EndAlarmTime": "2018-10-30 10:10:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540863300,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540864500,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 09:35:00",
+        "EndAlarmTime": "2018-10-30 09:55:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540861800,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540863000,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 09:10:00",
+        "EndAlarmTime": "2018-10-30 09:30:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 19.98,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540860301,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540861500,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 08:45:01",
+        "EndAlarmTime": "2018-10-30 09:05:00"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540858801,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540860001,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 08:20:01",
+        "EndAlarmTime": "2018-10-30 08:40:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540857301,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540858501,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 07:55:01",
+        "EndAlarmTime": "2018-10-30 08:15:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540855801,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540857001,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 07:30:01",
+        "EndAlarmTime": "2018-10-30 07:50:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540854301,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540855501,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 07:05:01",
+        "EndAlarmTime": "2018-10-30 07:25:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 11.12,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540853334,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540854001,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 06:48:54",
+        "EndAlarmTime": "2018-10-30 07:00:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540851901,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540853101,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 06:25:01",
+        "EndAlarmTime": "2018-10-30 06:45:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540850401,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540851601,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 06:00:01",
+        "EndAlarmTime": "2018-10-30 06:20:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540848901,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540850101,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 05:35:01",
+        "EndAlarmTime": "2018-10-30 05:55:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540847401,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540848601,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 05:10:01",
+        "EndAlarmTime": "2018-10-30 05:30:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 19.98,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540845902,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540847101,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 04:45:02",
+        "EndAlarmTime": "2018-10-30 05:05:01"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540844402,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540845602,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 04:20:02",
+        "EndAlarmTime": "2018-10-30 04:40:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540842902,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540844102,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 03:55:02",
+        "EndAlarmTime": "2018-10-30 04:15:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 15.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540841702,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540842602,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 03:35:02",
+        "EndAlarmTime": "2018-10-30 03:50:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540840202,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540841402,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 03:10:02",
+        "EndAlarmTime": "2018-10-30 03:30:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540838702,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540839902,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 02:45:02",
+        "EndAlarmTime": "2018-10-30 03:05:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540837202,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540838402,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 02:20:02",
+        "EndAlarmTime": "2018-10-30 02:40:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540835702,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540836902,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 01:55:02",
+        "EndAlarmTime": "2018-10-30 02:15:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540834202,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540835402,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 01:30:02",
+        "EndAlarmTime": "2018-10-30 01:50:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 18.82,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540833003,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540834132,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 01:10:03",
+        "EndAlarmTime": "2018-10-30 01:28:52"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540831503,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540832703,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 00:45:03",
+        "EndAlarmTime": "2018-10-30 01:05:03"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540830003,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540831203,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-30 00:20:03",
+        "EndAlarmTime": "2018-10-30 00:40:03"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540828503,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540829703,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 23:55:03",
+        "EndAlarmTime": "2018-10-30 00:15:03"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540827003,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540828203,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 23:30:03",
+        "EndAlarmTime": "2018-10-29 23:50:03"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 15.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540825803,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540826703,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 23:10:03",
+        "EndAlarmTime": "2018-10-29 23:25:03"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 15.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540824603,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540825503,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:50:03",
+        "EndAlarmTime": "2018-10-29 23:05:03"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 20.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540823103,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540824303,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:25:03",
+        "EndAlarmTime": "2018-10-29 22:45:03"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 4.68,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.246168,
+            "Lat": 30.65645
+          },
+          "MapPoint": {
+            "Lon": 114.25159442944781,
+            "Lat": 30.654013671396516
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅3589米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822799,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253768,
+            "Lat": 30.6611
+          },
+          "MapPoint": {
+            "Lon": 114.25918990535999,
+            "Lat": 30.658665846543091
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4423米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540823080,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:19:59",
+        "EndAlarmTime": "2018-10-29 22:24:40"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 1.87,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.250536,
+            "Lat": 30.6489
+          },
+          "MapPoint": {
+            "Lon": 114.25595862981373,
+            "Lat": 30.646460131988661
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4112米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822682,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.245984,
+            "Lat": 30.656282
+          },
+          "MapPoint": {
+            "Lon": 114.25141056632144,
+            "Lat": 30.653845621527598
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅3569米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540822794,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:18:02",
+        "EndAlarmTime": "2018-10-29 22:19:54"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 0.7,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.24992,
+            "Lat": 30.64355
+          },
+          "MapPoint": {
+            "Lon": 114.25534256005787,
+            "Lat": 30.641107788778648
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4090米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822610,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.252096,
+            "Lat": 30.646232
+          },
+          "MapPoint": {
+            "Lon": 114.25751748301411,
+            "Lat": 30.643791067846596
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4303米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540822652,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:16:50",
+        "EndAlarmTime": "2018-10-29 22:17:32"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 0.33,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.250168,
+            "Lat": 30.642416
+          },
+          "MapPoint": {
+            "Lon": 114.25559030232751,
+            "Lat": 30.639973302333104
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4128米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822585,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.24968,
+            "Lat": 30.6433
+          },
+          "MapPoint": {
+            "Lon": 114.25510269582149,
+            "Lat": 30.640857678926785
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4066米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540822605,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:16:25",
+        "EndAlarmTime": "2018-10-29 22:16:45"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 1.0,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.25152,
+            "Lat": 30.638684
+          },
+          "MapPoint": {
+            "Lon": 114.2569411573706,
+            "Lat": 30.636239759148033
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4315米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822502,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.25032,
+            "Lat": 30.642184
+          },
+          "MapPoint": {
+            "Lon": 114.25574218569042,
+            "Lat": 30.639741205735692
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4147米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540822562,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:15:02",
+        "EndAlarmTime": "2018-10-29 22:16:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 0.4,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.252168,
+            "Lat": 30.6376
+          },
+          "MapPoint": {
+            "Lon": 114.2575886985307,
+            "Lat": 30.635155349690081
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4397米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822478,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.25152,
+            "Lat": 30.638684
+          },
+          "MapPoint": {
+            "Lon": 114.2569411573706,
+            "Lat": 30.636239759148033
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4315米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540822502,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:14:38",
+        "EndAlarmTime": "2018-10-29 22:15:02"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 0.53,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.252984,
+            "Lat": 30.636682
+          },
+          "MapPoint": {
+            "Lon": 114.25840418611524,
+            "Lat": 30.634237048978139
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4496米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822440,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.252232,
+            "Lat": 30.637466
+          },
+          "MapPoint": {
+            "Lon": 114.25765265191244,
+            "Lat": 30.635021298652088
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4406米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540822472,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:14:00",
+        "EndAlarmTime": "2018-10-29 22:14:32"
+      },
+      {
+        "PhoneNum": "014120300083",
+        "AlarmType": 14,
+        "AlarmCount": 1,
+        "ContinueTime": 0.35,
+        "AlarmSrc": 0,
+        "AlarmPoi": {
+          "GeoPoint": {
+            "Lon": 114.253672,
+            "Lat": 30.636584
+          },
+          "MapPoint": {
+            "Lon": 114.25909183559996,
+            "Lat": 30.634139103958933
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4571米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "AlarmTime": 1540822414,
+        "EndPoi": {
+          "GeoPoint": {
+            "Lon": 114.253152,
+            "Lat": 30.63665
+          },
+          "MapPoint": {
+            "Lon": 114.25857209786994,
+            "Lat": 30.634205057302513
+          },
+          "Address": "山西省;太原市;晋源区,距离金银湖别墅4514米",
+          "ProvCode": 420000,
+          "CityCode": 420100,
+          "DistCode": 420112
+        },
+        "EndTime": 1540822435,
+        "Propertys": {
+          "LanId": null
+        },
+        "VehicleNo": "晋AF5811",
+        "CompanyId": 74,
+        "CompanyName": "康丰",
+        "DistName": "晋源区",
+        "AlarmTypeStr": "进出区域",
+        "StartAlarmTime": "2018-10-29 22:13:34",
+        "EndAlarmTime": "2018-10-29 22:13:55"
+      }
+    ],
+    "prePage": 0,
+    "nextPage": 0,
+    "isFirstPage": true,
+    "isLastPage": true,
+    "hasPreviousPage": false,
+    "hasNextPage": false,
+    "navigatePages": 8,
+    "navigatepageNums": [
+      1
+    ],
+    "navigateFirstPage": 1,
+    "navigateLastPage": 1,
+    "lastPage": 1,
+    "firstPage": 1
+  },
+  "retain": ""
+}

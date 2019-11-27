@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实时监控</title>
+    <link rel="stylesheet" href="../css/exsun_layout_map.css">
+    <link rel="stylesheet" href="../css/exsun_layout.css">
+    <link rel="stylesheet" href="../css/exsun_theme.css">
+    <link rel="stylesheet" href="../css/exsun_base.css">
+    <link rel="stylesheet" href="../css/exsun_map.css">
+    <!--<link rel="stylesheet" href="../css/amaze/amazeui.switch.css">-->
+    <link rel="stylesheet" href="../css/fonts-icon.css">
+    <link rel="stylesheet" href="../css/jquery.nstSlider.min.css">
+
+    <link rel="stylesheet" href="../js/libs/leaflet/leaflet.css">
+    <style>
+        .leaflet-div-icon { background: transparent !important; border: none !important; }
+        .areaCount { background: #f77d2d !important; height: 30px !important; top: 5px !important; border-radius: 50%; border: 2px solid #ffffff; font-size: 12px; font-weight: bold; color: #fff; text-align: center; line-height: 26px; }
+
+        .ex-monitor-mapicon-site .areaCount-number { background-color: #4E5964; color: #fff; }
+        .areaCount-number { height: 22px; height: 22px; position: absolute; right: -18px; bottom: 9px; z-index: 17; background-color: #447e2a; color: #fff; border: 2px solid #fff; white-space: nowrap; box-shadow: 0 0 3px rgba(0,0,0,.55); padding: 0 20px 0 10px; border-radius: 2rem 0 0 2rem; }
+
+        .ex-right-switch { position: absolute; top: calc(30% - 50px); z-index: 1000; height: 100px; width: 30px; right: 0px; transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s; -webkit-transition: all 0.5s; color: #fff; opacity: .2; line-height: 100px; text-align: center; border-top-left-radius: 5px; border-bottom-left-radius: 5px; }
+        .ex-right-switch.hidden { background: #404040 url('../img/mapview/slipright_icon_s.png') no-repeat 50% 50%; }
+        .ex-right-switch.open { background: #404040 url('../img/mapview/slipleft_icon_s.png') no-repeat 50% 50%; }
+        .ex-right-switch.hidden:hover { opacity: .7; }
+        .ex-right-switch.open:hover { opacity: .7; }
+
+        .ex-rect-box { padding: 10px; }
+        .ex-rect-box > ul { }
+        .ex-rect-box > ul > li { }
+        .ex-rect-box li > h2 { font-size: 15px; line-height: 38px; font-weight: normal; }
+        .ex-rect-box li > div.ec-btn-group { padding-bottom: 1.5rem; border-bottom: 1px solid #dadada; }
+        .ex-rect-box li > div.ec-btn-group > button.ec-btn { font-size: 1.3rem !important; padding: 0.5em .75em !important; }
+        .ex-rect-box li > div.ec-btn-group > button.ec-btn.white { background-color: #Fff !important; color: #7b7777 !important; border-color: #cac5c5 !important; }
+        /*.ex-rect-box li > div.ec-btn-group > button.ec-btn.white:hover,.ex-rect-box li > div.ec-btn-group > button.ec-btn.white:focus{background-color:#Fff !important}*/
+        .ex-btn-restType { width: 100%; }
+
+        .ex-rect-time-select { width: 100%; padding: 0px 12px 10px !important; border-bottom: none !important; }
+        .ex-rect-box li > div.ex-rect-time-select > button.ec-btn { font-size: 1.2rem !important; padding: 0.5em 1.6em !important; }
+        .ex-rect-reset { width: 100%; border-bottom: none !important; padding: 10px 0 !important; }
+        .ex-rect-box li > div.ex-rect-reset > button.ec-btn { font-size: 1.6rem !important; padding: 0.4em 17px !important; }
+
+        .ex-rect-time-history { padding: 15px 10px; border: 1px solid #dadada; margin-bottom: 15px; border-radius: 5px; position: relative; height: 150px; width: 200px; }
+        .ex-rect-time-history > div { margin-bottom: 10px; }
+        .ex-rect-time-history label { font-size: 13px; font-weight: bold; }
+        .ex-rect-time-history div.ec-input-group { padding: 0 5px; }
+        .ex-rect-time-history div.ec-input-group > input { font-size: 13px !important; border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+        .ex-rect-time-history div.ec-input-group > span { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+        .ex-rect-time-history div.ex-rect-time-now { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: #fff; z-index: 100; border-radius: 5px; display: none; }
+        .ex-rect-time-history div.ex-rect-time-now > h3 { width: 160px; margin: 47px auto 0; text-align: center; font-size: 15px; color: #777; line-height: 30px; }
+
+
+        .parkMarker { display: block; border: none; background: url('../img/dest_markers.png') no-repeat -34px -139px; }
+        .beginMarker { display: block; border: none; margin-left: 0px; margin-top: 0px; background: url('../img/dest_markers.png') no-repeat 0 0; }
+        .endMarker { display: block; border: none; background: url('../img/dest_markers.png') no-repeat 0 -34px; }
+        .popup-layout-ul .popup-layout-li{border-bottom:1px dotted #ccc}
+        .popup-layout-ul .popup-layout-li .popup-li-label{white-space:nowrap}
+        .popup-layout-ul .popup-layout-li .popup-li-span{color:#B22222;}
+        .popup-layout-ul .popup-layout-li.popup-layout-title-content{background: #334690;height: 2.5rem;line-height: 250%;color:#fff}
+        .truck_box.GPS{background-image:url('../img/mapview/truck_bg_cg.png') !important}
+        .truck_box.BHT{background-image:url('../img/mapview/truck_bg_BHT.png') !important}
+        .ex-layout-cardetail{background: url("../img/mapview/content_bg.png");background-position: center;background-repeat: no-repeat}
+        .ec-form-label{white-space: nowrap}
+    </style>
+</head>
+<body>
+<div class="ex-layout-main">
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=06ac80879da5aeeaa05e355e767644bd&plugin=AMap.PlaceSearch"></script>
+    <script src="../js/libs/hostUrl.js"></script>
+    <script src="../js/libs/leaflet/leaflet-src.js"></script>
+    <script src="../js/libs/jquery-1.9.1.min.js"></script>
+
+    <script src="../js/libs/ESLib-src.js"></script>
+    <script src="../js/libs/MapLib-src.js"></script>
+    <script src="../js/libs/jstree.js"></script>
+    <script src="../js/libs/jquery.dtGrid.js"></script>
+    <script src="../js/libs/leaflet.markercluster-src.js"></script>
+    <script src="../js/libs/leaflet.draw.js"></script>
+
+    <script src="../js/libs/amazeui.chosen.js"></script>
+    <script src="../js/libs/amazeui.js"></script>
+    <!--<script src="../js/libs/amazeui.switch.min.js"></script>-->
+    <script src="../js/libs/amazeui.datetimepicker.js"></script>
+
+    <script src="../js/libs/echarts.min.js"></script>
+    <script src="../js/page/MapView-3.0.0-src.js"></script>
+    <script src="../js/libs/MovingMarker.js"></script>
+    <script src="../js/libs/jquery-dialog-plus.js"></script>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.is_clickable { cursor: hand; cursor: pointer; }
+.track-control-slider { cursor: hand; cursor: pointer; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; position: relative; width: 300px; height: 10px; background: #3bb4f2; margin-top: .5rem; }
+.track-control-slider .track-control-leftGrip.gripHighlighted { background: #113344; }
+.track-control-slider .track-control-rightGrip.gripHighlighted { background: #113344; }
+.track-control-slider .track-control-rightGrip,
+.track-control-slider .track-control-leftGrip { position: absolute; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; width: 18px; height: 18px; background: #ffffff; margin-top: -4px; box-shadow: 0 0 5px rgba(0,0,0,.05); border: 1px solid #ddd; }
+.track-control-slider .track-control-bar { -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; position: absolute; background: #5eb95e; height: 8px; top: 1px; }
+.track-control-slider .track-control-highlightPanel { -webkit-transition: all 500ms ease-in-out; -moz-transition: all 500ms ease-in-out; -ms-transition: all 500ms ease-in-out; -o-transition: all 500ms ease-in-out; transition: all 500ms ease-in-out; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; position: absolute; background: #e87722; height: 20px; top: 0; }

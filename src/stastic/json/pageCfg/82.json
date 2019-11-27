@@ -1,0 +1,181 @@
+﻿{
+  "code": 1,
+  "detail": {
+    "gridCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "muneId": 10,
+          "title": "角色名称",
+          "key": "Account",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": "1,1,0,1"
+        },
+        {
+          "id": 5,
+          "muneId": 10,
+          "title": "角色类型",
+          "key": "RolesStr",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": ""
+        },
+        {
+          "id": 7,
+          "muneId": 10,
+          "title": "创建时间",
+          "key": "CreateTime",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 8,
+          "muneId": 10,
+          "title": "修改时间",
+          "key": "ModifyTime",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        }
+      ],
+      "button": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "searchCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "label": "角色名称",
+          "type": "input",
+          "name": "Account",
+          "value": null,
+          "option": null
+        },
+        {
+          "id": 2,
+          "label": "角色类型",
+          "type": "select",
+          "name": "RolesStr",
+          "value": null,
+          "option": [
+            {
+              "label":"管理员",
+              "value":1
+            }
+          ]
+        }
+      ],
+      "button": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "modalCfg": {
+      "button": [
+        "0",
+        "0"
+      ],
+      "cfg": [
+        {
+          "id": 10,
+          "text": "角色信息",
+          "pid": null,
+          "opened": true,
+          "data": {
+            "id": 10,
+            "panelId": 10,
+            "menuId": 10,
+            "pid": null,
+            "label": "角色信息",
+            "type": null,
+            "name": "角色信息",
+            "value": null,
+            "dicType": null,
+            "isDefault": null,
+            "isReq": null,
+            "sortId": 10
+          },
+          "children": [
+            {
+              "id": 1,
+              "text": "Account",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 1,
+                "panelId": 1,
+                "menuId": 10,
+                "pid": 10,
+                "label": "角色名称",
+                "type": "input",
+                "name": "Account",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 1
+              },
+              "children": null
+            },
+            {
+              "id": 2,
+              "text": "RolesStr",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 2,
+                "panelId": 2,
+                "menuId": 10,
+                "pid": 10,
+                "label": "角色类型",
+                "type": "input",
+                "name": "RolesStr",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 2
+              },
+              "children": null
+            }
+          ]
+        }
+      ],
+      "show": false,
+      "rule": {
+        "name": [
+          {
+            "trigger": "blur",
+            "message": "机构名称不能为空",
+            "required": true
+          }
+        ],
+        "shortName": [
+          {
+            "trigger": "blur",
+            "message": "机构简称不能为空",
+            "required": true
+          }
+        ]
+      },
+      "title": "角色管理"
+    },
+    "pageCfg": {
+      "treeTitle": "部门树",
+      "tree": null
+    }
+  }
+}

@@ -1,0 +1,790 @@
+﻿/*mapmonitor fullscreen*/
+body.map_full .ex-layout-content, body.map_full .ex-layout-map-content { position: fixed; top: 0; left: 0; width: 100% !important; height: 100% !important; z-index: 1010; }
+
+
+/*车辆列表*/
+.ex-layout-carlist-title, .ex-layout-struckbox-title { width: 100%; height: 40px; line-height: 40px; padding: 0 1.2rem; }
+.ex-layout-carlist { width: 220px; height: 100%; position: relative; top: 0; right: 0; overflow: hidden; z-index: 1011; opacity: 1; float: left; }
+.ex-layout-struckbox { width: 220px; height: 100%; position: relative; top: 0; right: 0px; overflow: hidden; z-index: 1011; float: left; display: none; }
+.ex-layout-carlist ul { padding: 0; }
+.ex-layout-carlist .ex-layout-carlist-content li { padding: .35rem; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card { cursor: pointer; margin-bottom: .25rem; background: rgba(255,255,255,.85); background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%); background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%); background: linear-gradient(to bottom, #ffffff 0%,#efefef 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); border-radius: .4rem; width: 100%; padding: .25rem; box-shadow: 0 1px 2px rgba(0,0,0,.15); }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card:focus,
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card:hover { box-shadow: 0 0 1.2rem #f60; }
+.ex-layout-carlist .ex-layout-carlist-content li.ec-active .carlist-card { box-shadow: 0 0 1.2rem #f60; }
+
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i { float: left; width: 30px; height: 40px; display: block; color: #fff; font-weight: 700; font-style: normal; margin-right: .25rem; text-align: center; line-height: 22px; background: url('../img/mapview/map_script.png') no-repeat; background-position: 0 0; text-shadow: 0 1px 1px rgba(0,0,0,.15); }
+
+
+
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i.green { background-position: 0 -40px; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i.yellow { background-position: -30px -40px; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i.red { background-position: -60px -40px; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i.gray { background-position: -90px -40px; }
+
+/*车辆在线状态*/
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i.online { background-position: 0 -100px; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i.offline { background-position: -30px -100px; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-card i.wireless { background-position: -60px -100px; }
+
+
+
+
+
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-title { width: 60%; white-space: nowrap; float: left; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-title .num { color: #585858; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-title .time { color: #999; }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-fav { position: absolute; right: 1rem; color: #ffad44; }
+
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-bottom { /*margin-left: .75rem;*/ }
+.ex-layout-carlist .ex-layout-carlist-content li .carlist-bottom .carlist-btn { background: rgba(255,255,255,.85); background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%); background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%); background: linear-gradient(to bottom, #ffffff 0%,#efefef 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); border-radius: 2rem; padding: .25rem; display: inline-block; float: left; box-shadow: inset 0 2px 3px rgba(0,0,0,.15); }
+
+
+
+.ex-layout-carlist .ex-layout-struckbox-content { height: 62%; }
+.ex-layout-carlist .ex-layout-advance-search { height: 30%; overflow-y: auto; position: absolute; left: 0; bottom: 0; width: 100%; }
+
+
+
+
+/*地图图例*/
+.ex-theme-map-icon-pin { display: block; width: 30px; height: 40px; color: #36a438; background: url('../img/mapview/map_script.png') 0 0 no-repeat; position: absolute; z-index: 1005; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; cursor: pointer; }
+.ex-theme-map-icon-pin.green { background-position: 0 0; color: #447e2a; }
+.ex-theme-map-icon-pin.yellow { background-position: -30px 0; color: #e2bd3e; }
+.ex-theme-map-icon-pin.red { background-position: -60px 0; color: #c85b35; }
+.ex-theme-map-icon-pin.gray { background-position: -90px 0; color: #c3c2c2; }
+
+.ex-theme-map-icon-pin > i { display: block; width: 16px; height: 16px; font-size: 0.75em; line-height: 16px; margin: 4px 7px; border-radius: 50%; text-align: center; background-color: #fff; font-style: normal; font-weight: bold; }
+.ex-theme-map-car-pin { position: absolute; z-index: 1002; }
+.ex-theme-map-car-pin i { display: block; width: 20px; height: 20px; background: url('../img/mapview/map_script.png') 0 -40px no-repeat; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+.ex-theme-map-car-pin.warning i { background-position: -20px -40px; }
+.ex-theme-map-car-pin.off i { background-position: -40px -40px; }
+
+/*车辆状态*/
+.ex-monitor-mapicon-truck, .ex-monitor-mapicon-truck-state, .ex-monitor-mapicon-law-car { cursor: pointer; position: absolute; z-index: 1002; }
+.ex-monitor-mapicon-truck .car-body,
+.ex-monitor-mapicon-truck-state .car-body,
+.ex-monitor-mapicon-law-car .car-body { background: url('../img/mapview/map_script.png') no-repeat; width: 30px; height: 40px; position: absolute; left: 0; top: 0; z-index: 20; }
+
+.ex-monitor-mapicon-truck.green .car-body { background-position: 0 -40px; }
+.ex-monitor-mapicon-truck.yellow .car-body { background-position: -30px -40px; }
+.ex-monitor-mapicon-truck.red .car-body { background-position: -60px -40px; }
+.ex-monitor-mapicon-truck.gray .car-body { background-position: -90px -40px; }
+
+/*.ex-monitor-mapicon-truck.gray { background-position: -33px -172px; transform:inherit!important; -webkit-transform:inherit!important; display: block; border: none; height: 100%; background: url('../img/dest_markers.png') no-repeat;}*/
+.ex-monitor-mapicon-truck.green:hover .car-body { background-position: -120px -40px; }
+.ex-monitor-mapicon-truck.yellow:hover .car-body { background-position: -150px -40px; }
+.ex-monitor-mapicon-truck.red:hover .car-body { background-position: -180px -40px; }
+.ex-monitor-mapicon-truck.gray:hover .car-body { background-position: -210px -40px; }
+
+/*在线*/
+.ex-monitor-mapicon-truck-state.online .car-body { background-position: 0 -100px; }
+/*离线*/
+.ex-monitor-mapicon-truck-state.offline .car-body { background-position: -30px -100px; }
+/*天线被剪断*/
+.ex-monitor-mapicon-truck-state.wireless .car-body { background-position: -60px -100px; }
+
+.ex-monitor-mapicon-truck-state.online:hover .car-body { background-position: -90px -100px; }
+.ex-monitor-mapicon-truck-state.offline:hover .car-body { background-position: -120px -100px; }
+.ex-monitor-mapicon-truck-state.wireless:hover .car-body { background-position: -150px -100px; }
+
+/*执法车*/
+.ex-monitor-mapicon-law-car .car-body { background-position: 0 -140px; }
+.ex-monitor-mapicon-law-car:hover .car-body { background-position: -30px -140px; }
+
+/*执法队员*/
+.ex-monitor-mapicon-user { cursor: pointer; position: absolute; z-index: 1002; }
+.ex-monitor-mapicon-user .user-body { background: url('../img/mapview/map_script.png') no-repeat; width: 30px; height: 40px; position: absolute; left: 0; top: 0; z-index: 20; }
+.ex-monitor-mapicon-user .user-body { background-position: 0 -180px; animation: user-step .5s steps(1, end) infinite; }
+.ex-monitor-mapicon-user:hover .user-body { background-position: -30px -180px; animation: user-step .5s steps(1, end) infinite; }
+.ex-monitor-mapicon-user .user-body.right { background-position: -60px -180px; animation: user-step .5s steps(1, end) infinite; }
+.ex-monitor-mapicon-user:hover .user-body.right { background-position: -90px -180px; animation: user-step .5s steps(1, end) infinite; }
+.ex-monitor-mapicon-user .user-body.left { background-position: -120px -180px; animation: user-step .5s steps(1, end) infinite; }
+.ex-monitor-mapicon-user:hover .user-body.left { background-position: -150px -180px; animation: user-step .5s steps(1, end) infinite; }
+
+
+@-webkit-keyframes user-step {
+    0% { background-position-y: -180px; }
+    50% { background-position-y: -220px; }
+    100% { background-position-y: -180px; }
+}
+
+
+/*工地状态*/
+.ex-monitor-mapicon-site { cursor: pointer; position: absolute; z-index: 1002; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+.ex-monitor-mapicon-site .pin-tip + .site-body { background: url('../img/mapview/map_script.png') no-repeat; width: 30px; height: 40px; position: absolute; left: 0; top: 0; z-index: 20; }
+
+.ex-monitor-mapicon-site.no-report .pin-tip + .site-body { background-position: 0 -260px; }
+/*.ex-monitor-mapicon-site.now .pin-tip + .site-body { background-position: -30px -260px; animation: site-now-step 1.5s steps(1, end) infinite; }*/
+.ex-monitor-mapicon-site.now .pin-tip + .site-body { background-position: -90px -260px; }
+.ex-monitor-mapicon-site.temp-site .pin-tip + .site-body { background-position: -120px -260px; }
+.ex-monitor-mapicon-site.alert .pin-tip + .site-body { background-position: -150px -260px; }
+.ex-monitor-mapicon-site.hacked .pin-tip + .site-body { background-position: -180px -260px; }
+.ex-monitor-mapicon-site.reportUnlod .pin-tip + .site-body { background-position: 0px -340px; }/*上报未出土工地图标*/
+.ex-monitor-mapicon-site.noise .pin-tip + .site-body { background-position: -60px -380px; }/*扬尘噪音*/
+
+
+/*消纳场状态*/
+.ex-monitor-mapicon-unload { cursor: pointer; position: absolute; z-index: 1002; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+.ex-monitor-mapicon-unload .pin-tip + .site-body { background: url('../img/mapview/map_script.png') no-repeat; width: 30px; height: 40px; position: absolute; left: 0; top: 0; z-index: 20; }
+/*.ex-monitor-mapicon-unload.normal .pin-tip + .site-body { background-position: -30px -300px; animation: site-now-step 1.5s steps(1, end) infinite; }*/
+.ex-monitor-mapicon-unload.normal .pin-tip + .site-body { background-position: -90px -300px; }
+.ex-monitor-mapicon-unload.hacked .pin-tip + .site-body { background-position: -180px -300px; }
+
+
+/*国控点状态*/
+.ex-monitor-mapicon-environ { cursor: pointer; position: absolute; z-index: 1002; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+.ex-monitor-mapicon-environ .pin-tip + .site-body { background: url('../img/mapview/map_script.png') 0 -340px no-repeat; width: 30px; height: 40px; position: absolute; left: 0; top: 0; z-index: 20; }
+.ex-monitor-mapicon-environ.excellent .pin-tip + .site-body { background-position: 0 -340px; }
+.ex-monitor-mapicon-environ.nice .pin-tip + .site-body { background-position: -30px -340px; }
+.ex-monitor-mapicon-environ.good .pin-tip + .site-body { background-position: -60px -340px; }
+.ex-monitor-mapicon-environ.light .pin-tip + .site-body { background-position: -90px -340px; }
+.ex-monitor-mapicon-environ.middle .pin-tip + .site-body { background-position: -120px -340px; }
+.ex-monitor-mapicon-environ.grave .pin-tip + .site-body { background-position: -150px -340px; }
+.ex-monitor-mapicon-environ.weighty .pin-tip + .site-body { background-position: -180px -340px; }
+
+.ex-monitor-mapicon-environ.excellent:hover .pin-tip + .site-body { background-position: 0 -380px; }
+.ex-monitor-mapicon-environ.nice:hover .pin-tip + .site-body { background-position: -30px -380px; }
+.ex-monitor-mapicon-environ.good:hover .pin-tip + .site-body { background-position: -60px -380px; }
+.ex-monitor-mapicon-environ.light:hover .pin-tip + .site-body { background-position: -90px -380px; }
+.ex-monitor-mapicon-environ.middle:hover .pin-tip + .site-body { background-position: -120px -380px; }
+.ex-monitor-mapicon-environ.grave:hover .pin-tip + .site-body { background-position: -150px -380px; }
+.ex-monitor-mapicon-environ.weighty:hover .pin-tip + .site-body { background-position: -180px -380px; }
+
+
+/*国控点状态*/
+.ex-monitor-mapicon-grid { cursor: pointer; position: absolute; z-index: 1002; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+.ex-monitor-mapicon-grid .site-body { background: url('../img/mapview/map_script.png') -210px -300px no-repeat; width: 30px; height: 40px; position: absolute; left: 0; top: 0; z-index: 20; }
+
+
+@-webkit-keyframes site-now-step {
+    0% { background-position-x: -30px; }
+    25% { background-position-x: -60px; }
+    50% { background-position-x: -90px; }
+    100% { background-position-x: -90px; }
+}
+
+/*tips 状态*/
+.ex-monitor-mapicon-truck .pin-tip, .ex-monitor-mapicon-truck-state .pin-tip, .ex-monitor-mapicon-law-car .pin-tip, .ex-monitor-mapicon-user .pin-tip, .ex-monitor-mapicon-site .pin-tip, .ex-monitor-mapicon-unload .pin-tip, .ex-monitor-mapicon-environ .pin-tip, .ex-monitor-mapicon-grid .pin-tip { height: 40px; display: none; }
+.ex-monitor-mapicon-truck:hover .pin-tip, .ex-monitor-mapicon-truck-state:hover .pin-tip, .ex-monitor-mapicon-law-car:hover .pin-tip, .ex-monitor-mapicon-user:hover .pin-tip, .ex-monitor-mapicon-site:hover .pin-tip, .ex-monitor-mapicon-unload:hover .pin-tip, .ex-monitor-mapicon-environ:hover .pin-tip, .ex-monitor-mapicon-grid:hover .pin-tip { display: block !important; }
+
+.pin-dome { position: absolute; left: 2px; top: 7px; z-index: 18; width: 26px; height: 26px; border-radius: 50%; background-color: #fff; box-shadow: 0 0 3px rgba(0,0,0,.55); }
+.pin-number { height: 22px; position: absolute; left: 13px; bottom: 9px; z-index: 17; background-color: #447e2a; color: #fff; border: 2px solid #fff; white-space: nowrap; box-shadow: 0 0 3px rgba(0,0,0,.55); padding: 0 10px 0 20px; border-radius: 0 2rem 2rem 0; }
+
+.ex-monitor-mapicon-truck.green .pin-number { background-color: #447e2a; }
+.ex-monitor-mapicon-truck.yellow .pin-number { background-color: #e2bd3e; }
+.ex-monitor-mapicon-truck.red .pin-number { background-color: #c85b35; }
+.ex-monitor-mapicon-truck.gray .pin-number { background-color: #dfdfdf; color: #585858; }
+.ex-monitor-mapicon-truck-state.online .pin-number { background-color: #447e2a; }
+.ex-monitor-mapicon-truck-state.offline .pin-number { background-color: #dfdfdf; color: #585858; }
+.ex-monitor-mapicon-truck-state.wireless .pin-number { background-color: #c85b35; }
+.ex-monitor-mapicon-law-car .pin-number { background-color: #4E5964; color: #fff; }
+.ex-monitor-mapicon-user .pin-number { background-color: #4E5964; color: #fff; }
+.ex-monitor-mapicon-site .pin-number { background-color: #4E5964; color: #fff; }
+.ex-monitor-mapicon-unload .pin-number { background-color: #4E5964; color: #fff; }
+.ex-monitor-mapicon-environ .pin-number { background-color: #fb0; }
+.ex-monitor-mapicon-grid .pin-number { background-color: #e2bd3e; }
+
+.pin-dome b { width: 26px; height: 26px; position: absolute; left: 0; top: 0; border-radius: 50%; border: 3px solid #ff6d2d; background-color: #ff6d2d; -webkit-animation: scaleout 2s infinite ease-in-out; animation: scaleout 2s infinite ease-in-out; }
+.pin-dome c { width: 26px; height: 26px; position: absolute; left: 0; top: 0; border-radius: 50%; border: 3px solid #ff6d2d; background-color: #ff6d2d; -webkit-animation: scaleout 2s infinite .5s ease-in-out; animation: scaleout 2s infinite .5s ease-in-out; }
+.pin-dome d { width: 26px; height: 26px; position: absolute; left: 0; top: 0; border-radius: 50%; border: 3px solid #ff6d2d; background-color: #ff6d2d; -webkit-animation: scaleout 2s infinite 1s ease-in-out; animation: scaleout 2s infinite 1s ease-in-out; }
+
+
+.ex-monitor-mapicon-environ .pin-aqi { font-weight: 700; height: 2.5rem; line-height: 2.1rem; position: absolute; left: 2rem; bottom: 2.35rem; width: 2.5rem; text-align: center; background: #fff; border-radius: 50%; z-index: 1010; color: #fb0; box-shadow: 0 0 3px rgba(0,0,0,.25); /* margin-top: -1.5rem; */ border: .2rem solid #fb0; }
+
+@-webkit-keyframes scaleout {
+    0% { -webkit-transform: scale(1.0); }
+    100% { -webkit-transform: scale(3); opacity: 0; }
+}
+
+@keyframes scaleout {
+    0% { transform: scale(1.0); -webkit-transform: scale(1.0); }
+    100% { transform: scale(3); -webkit-transform: scale(3); opacity: 0; }
+}
+
+
+
+/*报警状态*/
+.ex-monitor-mapicon-truck .pin-tip .pin-state, .ex-monitor-mapicon-truck-state .pin-tip .pin-state, .ex-monitor-mapicon-user .pin-state, .ex-monitor-mapicon-law-car .pin-state, .ex-monitor-mapicon-site .pin-state { position: absolute; top: -5px; left: 32px; z-index: 31; display: inline-block; width: 15rem; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i, .ex-monitor-mapicon-user .pin-state, .ex-monitor-mapicon-law-car .pin-state, .ex-monitor-mapicon-site .pin-state i { display: block; float: left; background: url('../img/mapview/map_script.png') no-repeat; width: 20px; height: 20px; visibility: hidden; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.fence, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.fence { background-position: 0 -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.speed, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.speed { background-position: -20px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.cover, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.cover { background-position: -40px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.line, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.line { background-position: -60px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.o-earth, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.o-earth { background-position: -80px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.i-earth, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.i-earth { background-position: -100px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.fix, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.fix { background-position: -120px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.o-fence, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.o-fence { background-position: -140px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.i-fence, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.i-fence { background-position: -160px -80px; visibility: visible; }
+.ex-monitor-mapicon-truck .pin-tip .pin-state i.io-fence, .ex-monitor-mapicon-truck-state .pin-tip .pin-state i.io-fence { background-position: -180px -80px; visibility: visible; }
+
+.ex-monitor-mapicon-site .pin-tip .pin-state i.earthed { background-position: -260px -80px; visibility: visible; }
+.ex-monitor-mapicon-site .pin-tip .pin-state i.ahead { background-position: -200px -80px; visibility: visible; }
+.ex-monitor-mapicon-site .pin-tip .pin-state i { background-position: -900px -80px; visibility: visible; }
+
+.ex-monitor-mapicon-user .pin-camera, .ex-monitor-mapicon-law-car .pin-camera, .ex-monitor-mapicon-site .pin-camera { background: url('../img/mapview/map_script.png') no-repeat; width: 20px; height: 20px; padding: 10px; background-color: #fff; border-radius: 50%; border: 1px solid #dfdfdf; position: absolute; top: -8px; right: -12px; z-index: 21; -webkit-animation-name: marker-raise; animation-name: marker-raise; -webkit-animation-duration: .5s; animation-duration: .5s; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-timing-function: ease-in; animation-timing-function: ease-in; -webkit-transform-origin: 50% 100%; -ms-transform-origin: 50% 100%; transform-origin: 50% 100%; background-position: -340px -80px; visibility: visible; }
+.ex-monitor-mapicon-law-car .pin-camera { top: -9px; left: 30px; }
+.ex-monitor-mapicon-user .pin-tip, .ex-monitor-mapicon-law-car .pin-tip { display: block !important; }
+
+
+
+@-webkit-keyframes marker-raise {
+    from { -webkit-transform: scale3d(0,0,1) translate3d(0,0,0); transform: scale3d(0,0,1) translate3d(0,0,0); }
+    50% { -webkit-transform: scale3d(0.9,1.1,1) translate3d(0,-30%,0); transform: scale3d(0.9,1.1,1) translate3d(0,-30%,0); }
+    80% { -webkit-transform: scale3d(1.1,.85,1) translate3d(0,0,0); transform: scale3d(1.1,.85,1) translate3d(0,0,0); }
+    to { -webkit-transform: scale3d(1,1,1) translate3d(0,0,0); transform: scale3d(1,1,1) translate3d(0,0,0); }
+}
+
+@keyframes marker-raise {
+    from { -webkit-transform: scale3d(0,0,1) translate3d(0,0,0); transform: scale3d(0,0,1) translate3d(0,0,0); }
+    50% { -webkit-transform: scale3d(0.9,1.1,1) translate3d(0,-30%,0); transform: scale3d(0.9,1.1,1) translate3d(0,-30%,0); }
+    80% { -webkit-transform: scale3d(1.1,.85,1) translate3d(0,0,0); transform: scale3d(1.1,.85,1) translate3d(0,0,0); }
+    to { -webkit-transform: scale3d(1,1,1) translate3d(0,0,0); transform: scale3d(1,1,1) translate3d(0,0,0); }
+}
+
+
+
+
+/*地图工具*/
+.ex-layout-maptool { position: absolute; z-index: 1030; box-shadow: 0 3px 3px rgba(0,0,0,.15); border-radius: .4rem; }
+.ex-map-top { top: 1rem; }
+.ex-map-left { left: 1rem; }
+.ex-map-bottom { bottom: 1.5rem; }
+.ex-map-right { right: 1rem; }
+.ex-map-center { top: 8%; }
+.ex-maptool-search-box { width: 300px; }
+.ex-maptool-search-box button.search { background-color: #5e7aea !important; }
+.ex-site-counter-box { position: absolute; width: 100%; left: 0; bottom: 0; }
+.ex-maptool-edit { z-index: 1029 !important; }
+.ex-map-tool-edit a { display: block; padding: .3rem .5rem; clear: both; font-weight: normal; color: #fff !important; white-space: nowrap; opacity: .7; }
+.ex-map-tool-edit a:hover, .ex-map-tool-edit a:focus, .ex-map-tool-edit a.ec-active { opacity: 1; color: #ffd800 !important; }
+.ex-layout-type-wbox { position: absolute; z-index: 1010; }
+.ex-maptool-type { float: left; margin-left: .55rem; background-color: #fff; }
+.ex-maptool-type h3 { line-height: 2.2; padding: 0 .75rem; background-color: #334690; color: #fff; font-size: 1.4rem; }
+.ex-maptool-type h3:first-child { border-radius: .4rem .4rem 0 0; }
+.ex-maptool-type .ec-list { margin-bottom: 0;padding-top: 2px; }
+.ex-maptool-type .ec-list > li { padding: 0 .5rem; line-height: 2.2; margin-top: 0; border: none; }
+.ex-maptool-type .ec-list > li > label { cursor: pointer; margin: 0; font-size: 1.2rem !important; padding: 0 10px !important;}
+.ex-layout-maptool .ec-list > li { border: 0; }
+.ex-maptool-item-type > li { display: none; }
+.ex-maptool-item-type > li hr { border-color: #dfdfdf; margin: .5rem 0; }
+.ex-maptool-icon-type > li { display: none; }
+.ex-maptool-icon-type > li.show { display: block; }
+
+.ex-maptool-search-box > .ec-form-field { font-size: 1rem !important; outline-style: none; border: 0; line-height: 1.8;height:26px; }
+.ex-maptool-search-box .ec-input-group-btn > .ec-btn { border: 0; line-height: 1.6; padding: 0.3em 1.5em; }
+.ex-maptool-search-box .ec-input-group-btn > .ec-btn.clear { position: absolute; left: -24px; top: 4px; padding: 0; z-index: 100; display: inline-block; width: 18px; height: 18px; border-radius: 50%; background-color: #d0d4df; color: #fff; }
+
+.ex-maptool-box-search-result { background-color: #fff; padding: 0; width: 90%; max-height: 15rem; position: absolute; top: 2.25rem; left: 0; z-index: 3000; border-radius: 0 0 .4rem .4rem; box-shadow: 0 3px 3px rgba(0,0,0,.25); overflow-x: hidden; overflow-y: auto; display: none; }
+.ex-maptool-box-search-result > li { color: #585858; line-height: 2.2; padding-left: 1rem; border-bottom: 1px solid #ededed; margin: 0 .75rem; }
+.ex-maptool-box-search-result > li:last-child { border: 0; }
+.ex-maptool-box-search-result > li.ec-active{ background-color: #9ADBFD; color: #fff; }
+.ex-maptool-box-search-result > li:hover { background-color: #9ADBFD; color: #fff; }
+.ex-maptool-box-search-result > li > i { margin-right: 1rem; }
+
+/*地图工具图标*/
+.ex-maptool-icon { display: block; width: 18px; height: 16px; background: url('../img/mapview/map_script.png') no-repeat; float: left; margin: 0 .25rem 0 0;cursor:default }
+.ex-maptool-icon.truck.green { background-position: -360px 0; }
+.ex-maptool-icon.truck.yellow { background-position: -380px 0; }
+.ex-maptool-icon.truck.red { background-position: -400px 0; }
+.ex-maptool-icon.truck.gray { background-position: -420px 0; }
+.ex-maptool-icon.truck-state.online { background-position: -360px -40px; }
+.ex-maptool-icon.truck-state.offline { background-position: -380px -40px; }
+.ex-maptool-icon.truck-state.wireless { background-position: -400px -40px; }
+.ex-maptool-icon.site.no-report { background-position: -360px -80px; }
+.ex-maptool-icon.site.now { background-position: -380px -80px; }
+.ex-maptool-icon.site.alert { background-position: -420px -80px; }
+.ex-maptool-icon.site.temp-site { background-position: -400px -80px; }
+.ex-maptool-icon.site.hacked { background-position: -440px -80px; }
+.ex-maptool-icon.law-car { background-position: -360px -100px; }
+.ex-maptool-icon.user { background-position: -380px -100px; }
+.ex-maptool-icon.unload.normal { background-position: -400px -100px; }
+.ex-maptool-icon.unload.hacked { background-position: -420px -100px; }
+.ex-maptool-icon.unload.bayonet{background-position: -460px -100px}
+.ex-maptool-icon.environ { background-position: -440px -100px; }
+.ex-maptool-icon.grid { background-position: -460px -100px; }
+.ex-maptool-icon.environ.excellent { background-position: -340px -140px; }
+.ex-maptool-icon.environ.nice { background-position: -360px -140px; }
+.ex-maptool-icon.environ.good { background-position: -380px -140px; }
+.ex-maptool-icon.environ.light { background-position: -400px -140px; }
+.ex-maptool-icon.environ.middle { background-position: -420px -140px; }
+.ex-maptool-icon.environ.grave { background-position: -440px -140px; }
+.ex-maptool-icon.environ.weighty { background-position: -460px -140px; }
+.ex-maptool-icon.star.on { background-position: -340px -180px; }
+.ex-maptool-icon.star.off { background-position: -360px -180px; }
+.ex-maptool-icon.signal.on { background-position: -380px -180px; }
+.ex-maptool-icon.signal.off { background-position: -400px -180px; }
+.ex-maptool-icon.noise { background-position: -382px -140px; }/*扬尘噪音*/
+
+
+/*报警框*/
+/*.ex-layout-monitor-wbox { display: inline-block; position: absolute; bottom: 1rem; left: 1rem; z-index: 1010; }
+.ex-monitor-wbox { margin-right: .55em; margin-bottom: .55rem; max-width: 16rem; color: #666; cursor: pointer; }
+.ex-monitor-wbox:hover { box-shadow: 0 0 3px rgba(255,255,255,.85); }
+.ex-monitor-wbox h3 { font-size: 1.2rem; margin-bottom: 0; }
+.ex-monitor-wbox .num { margin-bottom: 0; }
+.ex-monitor-wbox .num > strong { font-size: 1.5rem; }
+.ex-layout-monitor-wbox-content h2 { line-height: 2.2; padding: 0 .75rem; background-color: #3AB0EE; color: #fff; font-size: 1.4rem; margin: 0 .55rem .55rem 0; border-radius: .4rem; box-shadow: 0 2px 3px rgba(0,0,0,.25); }
+.ex-monitor-wbox .box { padding: .25em .5em; background-color: #3ab0ee; color: #fff; position: relative; border-radius: .4rem; box-shadow: 0 2px 3px rgba(0,0,0,.25); background-image: -webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); background-image: -o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); background-image: linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.ex-monitor-wbox .box .ec-ucheck-icons { color: #fff; }
+.ex-monitor-wbox .box label{ font-size:1.2rem !important; line-height:1; }
+.ex-monitor-truck-wbox .ex-monitor-wbox .box { background-color: #3cbc00; color: #fff; }
+.ex-monitor-site-wbox .ex-monitor-wbox .box { background-color: #ce9f00; color: #fff; }
+.ex-monitor-unload-wbox .ex-monitor-wbox .box { background-color: #EA943C; color: #fff; }
+.ex-monitor-wbox .box.white { background-color: #fff; color: #585858; }
+.ex-monitor-wbox .box.white .ec-ucheck-icons { color: #585858; }
+.ec-ucheck-checkbox:hover:not(.ec-nohover):not(:disabled) + .ec-ucheck-icons, .ec-ucheck-radio:hover:not(.ec-nohover):not(:disabled) + .ec-ucheck-icons { color: #fff; }
+.ex-monitor-wbox .box.white .ec-ucheck-checkbox:hover:not(.ec-nohover):not(:disabled) + .ec-ucheck-icons, .ex-monitor-wbox .box.white .ec-ucheck-radio:hover:not(.ec-nohover):not(:disabled) + .ec-ucheck-icons { color: #585858; }*/
+
+/*地图气泡*/
+/*=========国控点气泡============*/
+.ex-maptip { display: none; position: relative; /* left: -4.5rem; bottom: 100%;  z-index: 2020;*/ padding: .55rem .75rem; line-height: 1.9; color: #585858; box-shadow: 0 0 12px rgba(255,187,0,.55); }
+/*.ex-maptip:after { position: absolute; bottom: -9px; left: 5rem; display: inline-block !important; border-right: 9px solid transparent; border-left: 9px solid transparent; content: ''; border-top: 9px solid #fff; border-top-color: #fff; box-shadow: 0 0 5px rgba(255,187,0,.55); }*/
+.ex-maptip .ec-close { position: absolute; top: -.55rem; right: -.55rem; background-color: #f30; color: #fff; zoom: .75; }
+.ex-maptip h3 { font-size: 1.4rem; font-weight: normal; }
+.ex-maptip font { width: 70%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ex-maptip span, .ex-maptip f { width: 30%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: right; }
+.ex-maptip span { color: #fb0; }
+.ex-maptip hr { border-color: #dfdfdf; }
+.ex-maptip ul > li, .ex-maptip ul { width: 100%; display: inline-block; }
+.ex-maptip c { color: #f30; }
+.ex-maptip-list { width: 20rem; height: 21rem; background: #fff; border-radius: .4rem; }
+.ex-maptip-info { width: 39rem; height: 19.5rem; background: #fff; border-radius: .4rem; }
+.ex-maptip-info-box { width: 100%; display: inline-block; }
+.ex-maptip-info-box-photo { width: 30%; text-align: center; }
+.ex-maptip-info-box-photo img.user { width: 108px; height: 144px; }
+.ex-maptip-info-box-photo img.truck { width: 144px; height: 108px; }
+
+.ex-maptip-info-box-main { width: 70%; font-size: 1.2rem; margin-top: .75rem; }
+.ex-maptip-info-box-main .ex-maptool-icon { margin-right: .75rem; }
+
+.ex-maptip-info-box-control { padding-left: 0; }
+.ex-maptip-info-box-control > li { float: left; margin-right: .25rem; width: auto !important; }
+.ex-maptip-info-box-control > li > .ec-btn { font-size: 12px !important; }
+.ex-maptip-info-box-radius { margin-top: .5rem; padding-left: 0; line-height: 2.2; }
+.ex-maptip-info-box-radius > li { float: left; margin-right: .75rem; width: auto !important; border-right: 1px solid #dfdfdf; padding-right: .75rem; }
+.ex-maptip-info-box-radius > li:last-child { border: none; }
+.ex-maptip-info-box-radius l { display: block; width: 12px; height: 12px; border-radius: 50%; float: right; margin-top: .55rem; }
+.ex-maptip-info-box-radius l.green { background-color: #0ad100; }
+.ex-maptip-info-box-radius l.yellow { background-color: #e5bf3e; }
+.ex-maptip-info-box-radius l.red { background-color: #bc4822; }
+.ex-maptip-info-box-radius l.gray { background-color: #aaaaaa; }
+
+
+
+
+/*车辆列表*/
+.ex-layout-carlist .ex-layout-carlist-content { height: calc(100% - 114px ); overflow-x: hidden; padding: 7px; }
+.ex-layout-carlist .ex-layout-carlist-content.ex-layout-carlist-content-rect { height: calc(100% - 90px )!important; overflow-x: hidden; padding: 7px; }
+.ex-layout-carlist .ex-layout-carlist-wrap, .ex-layout-struckbox .ex-layout-struckbox-wrap { position: absolute; top: 40px; left: 0; width: 100%; height: 100%; }
+.ex-layout-lines-struckbox-wrap { height: 60% !important; }
+.ex-layout-carlist .carlist-next, .ex-layout-carlist .carlist-prev { width: 20px; height: 95px; position: absolute; top: 32px; left: 0; }
+.ex-layout-carlist .carlist-prev { left: auto; right: 0; }
+.carlist-bottom { clear: both; line-height: 1.9; color: #585858; }
+.ex-layout-carlist-page { position: absolute; right: 0; bottom: 0; width: 100%; }
+.ex-layout-carlist-btn { margin-left: 1.2rem; }
+.ex-layout-carlist-btn .ec-btn-default { background-color: transparent; color: #fff; border: none; text-shadow: 1px 1px 3px rgba(0,0,0,0.25); }
+.ex-layout-carlist-btn .ec-btn-default.ec-active, ex-layout-carlist-btn .ec-btn-default:hover { background-color: #ffd800; }
+.ex-layout-carlist-wrap { height: 100%; }
+.ex-layout-carlist-wrap .ex-detail-sider-content { height: calc(100% - 110px); }
+
+/*车辆详情*/
+.ex-layout-cardetail {width: calc(100%); height: 100%; position: absolute; bottom: -100%; left: 0; overflow: hidden; z-index: 1111; display: none; }
+.ex-theme-cardetail { background-color: #fff; }
+.ex-layout-cardetail-close { background-color: #f30; color: #fff !important; opacity: .95; position: absolute; top: 0; right: 0; width: 40px; height: 40px; line-height: 34px; }
+.ex-theme-cardetail-title { font-size: 1.4rem;background-color: #334690; height: 40px; width: 100%; line-height: 40px; color: #fff; padding: 0 1.2rem; }
+.ex-theme-cardetail-title > span { float: left; width: 15%; overflow: hidden; text-overflow: ellipsis; }
+.ex-theme-cardetail-title > ul { float: left; width: 80%; white-space: nowrap; overflow: hidden; text-align: center; }
+.ex-theme-cardetail-title > ul > li { cursor: pointer; font-weight: normal; }
+.ex-theme-cardetail-title > ul > li:hover, .ex-theme-cardetail-title > ul > li:focus { background-color: rgba(240,240,240,.45); color: #fff; }
+.ex-theme-cardetail-title > ul > li.ec-active, .ex-theme-cardetail-title > ul > li.ec-active:hover { background-color: #f0f0f0; color: #4b5f69; }
+.ex-car-state { background: #f0f0f0 url('../img/mapview/detail_bg.png') bottom center no-repeat; }
+.ex-btn-track { position: absolute; left: 0; top: 10px; z-index: 2; }
+.truck_box { width: 757px; height: 350px; background-image: url('../img/mapview/truck_bg.png'); background-repeat: no-repeat; margin: 15px auto; position: relative; z-index: 1; }
+.echarts_box { width: 100px; height: 100px; background-color: #136635; border-radius: 50%; position: absolute; z-index: 1020; }
+.echarts_box.speed { bottom: 6px; left: 175px; }
+.echarts_box.weight { top: 130px; right: 110px; }
+.echart_grid { min-height: 300px; }
+.echart_grid li { height: 100%; }
+.stats-card { background-color: #fff; margin: 10px; padding: 0 15px 15px; font-size: 1.3rem; line-height: 2.2; position: relative; }
+.stats-card.expand { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 5000; margin: 0; }
+.stats-card h4 { font-size: 1.5rem; color: #4b5f69; }
+.stats-card h4 > .ex-expand, .stats-card h4 > .ex-compress { position: absolute; right: .5rem; top: .5rem; color: #585858; font-size: 1rem; }
+.stats-card h4 > .ex-compress { display: none; }
+.ex-acc p { text-align: center; }
+.ex-theme-cardetail-warning .dt-grid-container { max-height: 280px; overflow: auto; }
+.car-light { width: 45px; height: 28px; position: absolute; top: 0; left: 173px; overflow: hidden; background: url(../img/mapview/car_animate_light.png) no-repeat; z-index: 18; }
+.car-light.l-red { background-position: 0 0; }
+.car-light.l-yellow { background-position: 0 -30px; }
+.car-light.l-green { background-position: 0 -59px; }
+.car-light.l-gray { background-position: 0 -88px; }
+.car-cover { width: 396px; height: 50px; position: absolute; top: 0; left: 0; background: url(../img/mapview/truck_cover.png) 0 0 no-repeat; z-index: 10; }
+.car-cover.l-red { background-position: 0 0; }
+.car-cover.l-yellow { background-position: 0 0; }
+.car-cover.l-green { background-position: 0 0; }
+.car-mask { width: 396px; height: 50px; position: absolute; top: 36px; left: 322px; z-index: 101; overflow: hidden; }
+.ex-map-car-live { position: relative; min-height: 300px; width: 100%; display: block; }
+
+/*设备控制*/
+ul.ex-layout-control-content { padding: 1rem; line-height: 2.2; -webkit-column-width: 380px; -moz-column-width: 380px; -o-colum-width: 380px; -webkit-column-gap: 1rem; -moz-column-gap: 1rem; -o-column-gap: 1rem; }
+ul.ex-layout-control-content > li { width: 100%; display: inline-block; padding: 1rem; margin-bottom: 1rem; border-radius: 4px; background-color: #F7F5EF; }
+ul.ex-layout-control-content > li > h3 { font-size: 1.5rem; white-space: nowrap; font-weight: normal; }
+ul.ex-layout-control-content > li label { width: 100%; font-size: 1rem; text-align: center; white-space: nowrap; }
+.ex-icon-control { display: block; width: 60px; height: 60px; margin: 0 auto; }
+
+
+
+
+
+
+/*ex-layout-form-search*/
+.ex-layout-form-search { /*padding: .5rem; display: inline-block;*/ width: 100%; position: relative;     background-color: #e6eaf3; border-bottom: 1px solid #dfdfdf; box-shadow: inset 0 -2px 4px rgba(0,0,0,.05); }
+.ex-layout-form-search [class*="ec-u-"] { padding-left: .3rem; padding-right: .3rem; }
+.ex-layout-form-search [class*="ec-u-"].ec-form-label { font-size: 13px; }
+.ex-layout-form-search .ex-final-button { padding-left: 2rem; }
+.ex-layout-form-search .ex-btn-charts { position: absolute; right: .5rem; bottom: .5rem; }
+.ex-layout-charts-content { position: absolute; bottom: 0; left: 0; z-index: 1021; background-color: #fff; }
+.ex-layout-charts-content .ec-close { position: absolute; right: 1rem; top: 1rem; z-index: 1030; }
+.ex-layout-carlist-search input { border-radius: 4px 0 0 4px; /*margin-top: 5px;*/ font-size: 1rem; }
+.ex-layout-carlist-search .ec-btn { padding-top: 0; border-radius: 0 4px 4px 0; }
+.ex-layout-struckbox-search input { border-radius: 4px 0 0 4px; /*margin-top: 5px;*/ font-size: 1.2rem; }
+.ex-layout-struckbox-search .ec-btn { padding-top: 0; border-radius: 0 4px 4px 0; }
+
+/*ex-layout-cardetail*/
+.ex-layout-mobile { position: absolute; z-index: 10; top: 80px; left: 278px; }
+/*.ex-icon-16 { display: block; width: 16px; height: 16px; background-image: url("/Asset/img/script_mobile.png"); background-repeat: no-repeat; margin: 12px 5px; }*/
+/*.ex-icon-mobile { background-image: url("/Asset/img/i_mobile_off.png"); }*/
+/*.ex-icon-mobile.on { background-image: url("/Asset/img/i_mobile_on.png"); }*/
+/*.ex-icon-bd { background-image: url("/Asset/img/i_bd_off.png"); }*/
+/*.ex-icon-bd.on { background-image: url("/Asset/img/i_bd_on.png"); }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*trackview*/
+.ex-layout-trackcontrol { position: absolute; bottom: 2rem; left: 10px; width: 420px; /*margin-left: -223px;*/ z-index: 1100; color: #585858 !important; background: #fff; box-shadow: 0 3px 3px rgba(0,0,0,.15); margin-top: .5rem; }
+.track-control-box { display: none; }
+.track-control-box label { cursor: pointer; }
+.ex-layout-trackcontrol .ec-form-group { margin-top: 0; margin-bottom: 0; }
+.ex-layout-trackcontrol-search, .ex-layout-trackcontrol-console, .ex-layout-trackcontrol-query { padding: .25rem .5rem; clear: both; position: relative; display: inline-block; width: 100%; margin-top: .5rem; }
+.ex-layout-trackcontrol-console { background-color: #f9f9f9; }
+.ex-layout-trackcontrol-search .ex-datetime-box { position: absolute; bottom: 100%; left: 0; width: 426px; background-color: #fff; border-bottom: 2px dotted #ddd; display: none; box-shadow: 0 -3px 3px rgba(0,0,0,.15); }
+.ex-layout-trackcontrol-search .ex-datetime-box > li { padding: .5rem; }
+.ex-layout-trackcontrol-search > li, .ex-layout-trackcontrol-console > li, .ex-layout-trackcontrol-query > li { float: left; margin-right: .5rem; }
+.ex-layout-trackcontrol .ec-input-group-sm > .ec-form-field { font-size: 1.2rem !important; height: auto; }
+.ex-layout-trackcontrol .ec-input-group-sm > .ec-input-group-label { font-size: 1.2rem !important; line-height: normal !important; height: auto; }
+.track-control-label { text-align: right; }
+.ex-layout-track-chart { padding: 0; overflow-y: auto; overflow-x: hidden; min-width: 320px; max-width: 320px; }
+.ex-layout-track-chart-box { background: #fff; line-height: 2.2; padding: 0; margin: 0; min-width: 280px; max-height: 200px; position: relative; }
+.ex-layout-track-chart-box dt { background-color: #3bb4f2; color: #fff; padding: 0 .7rem; margin: 0; }
+.ex-layout-track-chart-box dd { padding: 0 .7rem; min-height: 150px; max-height: 172px; overflow: auto; margin: 0; }
+.ex-layout-track-chart-box .ec-close { position: absolute; right: .5rem; top: 0; }
+.track-chart-box { margin-bottom: .5rem; padding: 0 .5rem; display: none; }
+.TrackPanel-emOrStrong { color: #f60; font-weight: 700; }
+
+.travel-date { color: #000; border-bottom: 1px solid #000; font-size: 14px; font-weight: bold; line-height: 25px; }
+.travel-item { border-bottom: 1px dashed #00b3ee; margin-top: 5px; cursor: pointer; }
+.travel-item:hover { background-color: #d6f1ff; }
+.travel-item:hover .travel-item-table { background-color: #d6f1ff; }
+.travel-item.selected { background-color: #d6f1ff; }
+.travel-item.selected .travel-item-table { background-color: #d6f1ff; }
+.travel-item-table { width: 280px; border-collapse: collapse; background-color: #fff; border: 1px solid #ddd; margin-top: 5px; }
+.travel-item-table td { padding: 2px; }
+
+.TrackPanel-icon { background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAOCAYAAAA8E3wEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RDEwQjM1Njg3Qjk0MTFFNTk3MDhCNDMxRDc3RUFDMDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RDEwQjM1Njk3Qjk0MTFFNTk3MDhCNDMxRDc3RUFDMDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpEMTBCMzU2NjdCOTQxMUU1OTcwOEI0MzFENzdFQUMwOCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpEMTBCMzU2NzdCOTQxMUU1OTcwOEI0MzFENzdFQUMwOCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuV7yckAAAD+SURBVHjarFQxEsIgEDwyjNpKo1/QPEdL/YJW2vkB/UI6W32OviFNsLTUwwHEy4UhMTuzSUiyd7ccICazxQAATsgVUkEcD+QZuSvFFbroJF6OyA2kYWz/fSJHXnd7AeQCIs9eJ9BhlVAhhbYO1ScoB5OIfsuFljRZeb+w+ul8GQ5VLTB1xTtVWZMFk8AxVoiHCeochUkJMvgXLqhz4+6c+14ShtPGFUOcSugDoSuuh8G4MSHtGVk09Snl3jHfZGzRtHaXgH6mtGkvMoWZhLrLxv/Zj8xqrPXU6qQ947Ytp7JADkNdotPCJNwjTQlre+alHMIHO/7q4r30urcAAwBqFGB6YniioAAAAABJRU5ErkJggg=="); height: 14px; width: 14px; background-repeat: no-repeat; display: inline-block; margin-right: 5px; }
+.TrackPanel-icon.stay { background-position: 0 0; }
+.TrackPanel-icon.over-speed { background-position: -14px 0; }
+.TrackPanel-mRow { line-height: 24px; border-bottom: 1px dashed #00b3ee; }
+.TrackPanel-mRow span { vertical-align: middle; }
+.TrackPanel-hoverRow:hover { background: #d6f1ff; cursor: pointer; }
+
+
+
+/*ex-icon-maptool*/
+.ex-icon-maptool { display: block; width: 24px; height: 24px; float: left; margin-left: -1.25rem; background-image: url('../img/mapview/map_tool.png'); background-repeat: no-repeat; }
+.ex-maptool-china { background-position: 0 -144px; }
+.ex-maptool-range { background-position: 0 -72px; }
+.ex-maptool-area { background-position: 0 -96px; }
+.ex-maptool-scale-big { background-position: 0 -24px; }
+.ex-maptool-scale-small { background-position: 0 -48px; }
+.ex-maptool-location { background-position: 0 -120px; }
+.ex-maptool-reset { background-position: 0 0; }
+
+
+/*map-tips*/
+
+/*popcard*/
+.leaflet-popup-content-wrapper, .leaflet-popup-tip, .leaflet-popup { z-index: 1050 !important; }
+.leaflet-popup-content-wrapper { padding: .5rem !important; border-radius: 4px !important; }
+.leaflet-popup-content { margin: 0 !important; }
+.leaflet-popup-content .headlines { font-size: 1.5rem; color: #f60; line-height: 2.2; font-weight: 700; }
+.leaflet-popup-content .stats-card { padding: 0 15px 15px; font-size: 1rem; line-height: 1.9; position: relative; background-color: transparent; box-shadow: none; margin: 0; }
+.leaflet-popup-content p { margin: 0 !important; }
+.leaflet-container a.leaflet-popup-close-button { top: -6px !important; right: -6px !important; }
+
+
+.ex-map-tip-head { font-size: 1.6rem; height: 32px; }
+.ex-map-tip-head > h3 { float: left; }
+.ex-map-tip-timer { font-size: 1.2rem; color: #999; font-weight: normal; margin-left: .75rem; }
+.ex-map-tip-mobile { width: 50px; float: right; }
+.ex-map-tip-status { clear: both; line-height: 1.9; font-size: 1.2rem; /*color: #ff6600;*/ }
+.ex-map-tip-status > li > label { font-weight: 700; width: 35%; }
+.ex-map-tip-status > li > span { color: #f60; }
+.ex-map-tip-ctl { clear: both; margin: .75rem 0; padding: .35rem 0; border: 1px dashed #ddd; border-left: none; border-right: none; display: inline-block; width: 100%; text-align: center; }
+.ex-map-tip-ctl > li { cursor: pointer; border-radius: 4px; }
+.ex-map-tip-ctl > li:hover { color: #fff; background-color: #f60; }
+.ex-map-tip-ctl > li > i { font-size: 1.8rem; width: 100%; }
+.ex-map-tip-ctl > li > label { width: 100%; }
+.ex-map-tip-location { font-weight: 700; font-size: 1.3rem; line-height: 2.2; }
+
+/*云图管理*/
+.ex-maptool-tab { }
+.ex-maptool-tab li { float: left; margin-right: 1.5rem; }
+
+.ex-maptool-tab:after { clear: both; }
+.ex-maptool-tab button { width: 32px; height: 32px; padding: 0; line-height: normal; text-align: center; margin: .75rem .5rem 0; }
+.ex-maptool-tab button.ec-active { background-color: #dd514c !important; border-color: #dd514c !important; }
+.ex-maptool-tab-draw { display: none; color: #585858 !important; background-color: #C3E7FF !important; background-image: -webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); background-image: -o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); background-image: linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); -webkit-background-size: 40px 40px; background-size: 40px 40px; }
+.ex-maptool-property { clear: both; display: none; }
+.ex-maptool-property .ex-theme-tree { background-color: transparent; }
+.ex-mapgrid-tip-box { position: absolute; min-width: 28rem; background-color: #fff; padding: .75rem; box-shadow: 0 0 5px rgba(0,0,0,.35); z-index: 1800; }
+.ex-mapgrid-tip-box:before { position: absolute; bottom: -7px; left: 50%; margin-left: -4px; display: inline-block !important; border-right: 7px solid transparent; border-top: 7px solid #fff; border-left: 7px solid transparent; border-top-color: #fff; content: ''; }
+.ex-mapgrid-tip-box li label { line-height: 2.2; }
+
+
+/*ex-style-draw*/
+.ex-style-draw { width: 300px; background-color: #fefff6 !important; background-image: -webkit-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); background-image: -o-linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); background-image: linear-gradient(-45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent); -webkit-background-size: 40px 40px; background-size: 40px 40px; display: inline-block; padding: .5rem; position: absolute; left: 100%; top: 0; box-shadow: 0 0 5px rgba(0,0,0,.35); display: none; }
+.ex-style-draw-line { width: 100%; height: 2.2rem; border: 1px solid #ddd; border-radius: .35rem; cursor: pointer; }
+.ex-style-draw-line hr { border-top-width: 4px; margin: .8rem; border-top-color: #0e90d2; }
+.ex-style-draw-line hr.solid { border-top-style: solid; }
+.ex-style-draw-line hr.dotted { border-top-style: dotted; }
+.ex-style-draw-line hr.dashed { border-top-style: dashed; }
+.ex-style-draw-line li { margin-bottom: .75rem; display: inline-block; width: 100%; }
+.ex-style-draw .simple { display: inline-block; width: 100%; height: 100%; }
+
+
+
+.ex-style-draw-fill { width: 100%; height: 1rem; margin: .5rem auto; cursor: pointer; }
+
+
+
+
+.ex-style-draw-fill em { display: block; width: 100%; height: 1rem; margin: .5rem auto; background-color: #f60; border-radius: .35rem; cursor: pointer; }
+.ex-style-draw-fill li { float: left; margin: .25rem; text-align: center; }
+.ex-style-draw-fill .ex-map-fill { display: block; width: 1.5rem; height: 1.5rem; border-radius: .35rem; }
+
+.ex-style-draw-fill .red { background-color: #f44336; }
+.ex-style-draw-fill .pink { background-color: #E91E63; }
+.ex-style-draw-fill .purple { background-color: #9C27B0; }
+.ex-style-draw-fill .deep-purple { background-color: #673AB7; }
+.ex-style-draw-fill .indigo { background-color: #3F51B5; }
+.ex-style-draw-fill .blue { background-color: #2196F3; }
+.ex-style-draw-fill .light-blue { background-color: #03A9F4; }
+.ex-style-draw-fill .cyan { background-color: #00BCD4; }
+.ex-style-draw-fill .teal { background-color: #009688; }
+.ex-style-draw-fill .green { background-color: #4CAF50; }
+.ex-style-draw-fill .light-green { background-color: #8BC34A; }
+.ex-style-draw-fill .limn { background-color: #CDDC39; }
+.ex-style-draw-fill .yellow { background-color: #FFEB3B; }
+.ex-style-draw-fill .amber { background-color: #FFC107; }
+.ex-style-draw-fill .orange { background-color: #FF9800; }
+.ex-style-draw-fill .deep-orange { background-color: #FF5722; }
+.ex-style-draw-fill .brown { background-color: #795548; }
+.ex-style-draw-fill .crey { background-color: #9E9E9E; }
+.ex-style-draw-fill .blue-crey { background-color: #607D8B; }
+
+
+.ex-style-draw-icon { width: 4.5rem; height: 4.5rem; display: inline-block; text-align: center; cursor: pointer; position: relative; }
+.ex-style-draw-icon em.ex-map-icon { position: absolute; left: .175rem; left: .57rem\0; top: 1.25rem; top: 1.55rem\0; width: 3.5rem; height: 3.5rem; font-size: 2.7rem; color: #fff; line-height: 1; }
+.ex-style-draw-icon span.ex-map-icon { font-size: 4.5rem; color: #f60; text-shadow: 0 0 5px rgba(0,0,0,.25); }
+
+
+@font-face { font-family: "maptip"; src: url('../fonts/iconfont.eot?t=1486346987294'); /* IE9*/ src: url('../fonts/iconfont.eot?t=1486346987294#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/iconfont.woff?t=1486346987294') format('woff'), /* chrome, firefox */ url('../fonts/iconfont.ttf?t=1486346987294') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/iconfont.svg?t=1486346987294#iconfont') format('svg'); /* iOS 4.1- */ }
+.ex-map-icon { font-family: "maptip" !important; font-size: 1.6rem; font-style: normal; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+.ex-map-icon.ex-map-icon-bury:before { content: "\e614"; }
+.ex-map-icon.ex-map-icon-shot-camera:before { content: "\e634"; }
+.ex-map-icon.ex-map-icon-grid:before { content: "\e655"; }
+.ex-map-icon.ex-map-icon-user:before { content: "\e69b"; }
+.ex-map-icon.ex-map-icon-pointer:before { content: "\e6dd"; }
+.ex-map-icon.ex-map-icon-road:before { content: "\e738"; }
+.ex-map-icon.ex-map-icon-camera:before { content: "\e697"; }
+.ex-map-icon.ex-map-icon-fav:before { content: "\e60f"; }
+.ex-map-icon.ex-map-icon-car:before { content: "\e606"; }
+.ex-map-icon.ex-map-icon-site:before { content: "\e607"; }
+.ex-map-icon.ex-map-icon-map-tip:before { content: "\e600"; }
+
+
+.ex-style-draw-select { display: inline-block; width: 228px; border: 1px solid #ddd; border-radius: .35rem; padding: .5rem; margin-top: .75rem; position: absolute; background-color: #fff; left: 0; top: -.75rem; box-shadow: 0 0 5px rgba(0,0,0,.15); display: none; z-index: 1000; }
+.ex-style-draw-icon-select li { float: left; margin: .55rem; text-align: center; }
+.ex-style-draw-icon-select li > i { font-size: 2.2rem; color: #0e90d2; cursor: pointer; }
+
+
+/*人员气泡*/
+.ex-man-tip-human .ex-map-tip-head { font-size: 1.6rem; height: 58px; }
+.ex-man-tip-human .ex-map-tip-head > h3 { float: left; width: 100%; padding-left: .8rem; }
+.ex-man-tip-human .ex-map-tip-timer { font-size: 1.2rem; color: #999; font-weight: normal; margin-right: .75rem; line-height: 27px; }
+.ex-map-tip-humen-status { float: left; width: 100%; padding-left: .8rem; border-bottom: 1px dashed #ddd; height: 2.6rem; line-height: 2.6rem; }
+.ex-map-tip-humen-status > p { color: #f60; font-size: 1.5rem; float: left; }
+.ex-map-tip-humen-status .ex-icon-16 { margin: 8px 0 0 0; }
+.ex-map-tip-humen-info .ex-tip-humen-img { width: 110px; height: 90px; display: inline-block; padding: 8px 5px 0px; }
+.ex-map-tip-humen-info .ex-tip-humen-img > img { width: 100%; height: 100%; }
+.ex-map-tip-humen-info .ex-tip-humen-detial { display: inline-block; width: 274px; vertical-align: top; }
+.ex-map-tip-humen-info .ex-tip-humen-detial > ul { padding: 13px 5px 0px; font-size: 1.3rem; }
+.ex-map-tip-humen-info .ex-tip-humen-detial > ul li > span { color: #f60; }
+
+.ex-man-tip-human .ex-map-tip-mobile { width: 50px; float: right; }
+.ex-man-tip-human .ex-map-tip-status { clear: both; line-height: 1.9; font-size: 1.2rem; /*color: #ff6600;*/ }
+.ex-man-tip-human .ex-map-tip-status > li > label { font-weight: 700; width: 35%; }
+.ex-man-tip-human .ex-map-tip-status > li > span { color: #f60; }
+.ex-man-tip-human .ex-map-tip-ctl { clear: both; margin: .5rem 0; padding: .35rem 0; border-bottom: 0; border-left: none; border-right: none; display: inline-block; width: 100%; text-align: center; }
+.ex-man-tip-human .ex-map-tip-ctl > li { cursor: pointer; border-radius: 4px; }
+.ex-man-tip-human .ex-map-tip-ctl > li:hover { color: #fff; background-color: #f60; }
+.ex-man-tip-human .ex-map-tip-ctl > li > i { font-size: 1.8rem; width: 100%; }
+.ex-man-tip-human .ex-map-tip-ctl > li > label { width: 100%; }
+.ex-man-tip-human .ex-map-tip-location { font-weight: 700; font-size: 1.3rem; line-height: 2.2; }
+
+
+/*.leaflet-tile-container { -webkit-filter: grayscale(0.55) invert(0); }*/
+
+
+/* 油路模块 */
+.ex-maptool-postway { clear: both; display: none; position: absolute; top: 0; left: 220px; }
+.ex-maptool-postway > .ex-layout-sider { width: 250px !important; }
+.ex-maptool-postway div.ec-form-group { overflow: hidden; padding: 0 10px; }
+.ex-maptool-postway div.ec-form-group > label { padding: 0; text-align: right; }
+.ex-maptool-postway div.ec-form-group > div { padding: 0; }
+.ex-postway-info { padding-bottom: 10px; border-bottom: 1px solid #ddd; }
+.ex-postway-info > ul > li.ec-form-group { margin-top: 0; }
+.ex-postway-info-btn { text-align: center; }
+.ex-postway-info-btn > a { color: #fff !important; }
+.ex-postway-way .dt-grid-toolbar-container .dt-grid-pager .dt-grid-pager-status { display: none; }
+.ex-maptool-postway-close { display: inline-block; text-align: center; width: 24px; font-size: 20px; font-weight: bold; line-height: 24px; color: #fff; opacity: .7; -webkit-transition: all .3s; transition: all .3s; float: right; color: #333 !important; }
+.ex-maptool-postway-close:hover { color: #888 !important; }
+.ex-layout-postway-box { background-color: #fff; }
+
+
+
+
+
+/*ex-site-report*/
+.ex-site-report { line-height: 2.2; }
+.ex-site-report .item { display: inline-block; width: 100%; }
+.ex-site-report .item .item-image { width: 16%; float: left; border-right: 1px solid #ddd; padding-left: 1rem; padding-right: 1rem; }
+.ex-site-report .item .item-image img { width: 160px; height: 160px; margin: 0 auto .5rem; }
+.ex-site-report .item .item-info { width: 22%; float: left; border-right: 1px solid #ddd; padding-left: 2rem; padding-right: 2rem; }
+.ex-site-report .item .item-info i { font-style: normal; color: #fff; background-color: #00c332; border-radius: .35rem; padding: 0 1.5rem; }
+.ex-site-report .item .item-user-avatar { width: 12%; float: left; border-right: 1px solid #ddd; }
+.ex-site-report .item .item-user-avatar img { width: 80px; height: 80px; margin: .5rem auto; }
+.ex-site-report .item .item-user-info { width: 27%; float: left; border-right: 1px solid #ddd; padding-left: 2rem; padding-right: 2rem; }
+.ex-site-report-content { overflow: auto; padding: .5rem; }
+.ex-site-report-content .title { background-color: #f0f0f0; text-align: center; padding: 0 !important; }
+.ex-site-report-content .title > div { font-size: 13px; padding: .8rem 0; line-height: 2.2 !important; }
+.ex-report-control { position: absolute; right: 2rem; top: 2rem; }
+
+.ex-site-report-detail { display: inline-block; width: 100%; }
+.ex-site-report-detail-title img { width: 64px; height: 64px; float: left; margin-right: 1.5rem; }
+.ex-site-report-detail-title { width: 100%; display: inline-block; line-height: 2.5; }
+
+.ex-site-report-detail-cotent { display: inline-block; float: left; width: 45%; text-align: left; line-height: 1.8; }
+.ex-site-report-detail-map { width: 52%; float: right; }
+.ex-site-report-detail-map .ex-map-info { color: #fff; width: 100%; position: absolute; bottom: 0; left: 0; background-color: rgba(0,0,0,.75); padding: 2rem; font-size: 1.6rem; text-align: left; z-index: 2500; }
+
+
+.ex-site-report-score { padding: 1.5rem; }
+
+.ex-site-report-comment { width: 100%; clear: both; margin-top: 2rem; }
+.ex-report-image-up li { float: left; padding: 1rem; }
+.ex-report-image-upload { position: relative; }
+.ex-report-image-upload img { width: 80px; height: 55px; }
+.ex-report-image-upload input[type="file"] { width: 80px; height: 55px; position: absolute; top: 0; left: 0; cursor: pointer; opacity: 0; filter: alpha(opacity=0); }
+.ex-report-image-upload .ec-close { position: absolute; right: 0; top: 0; width: 20px; height: 20px; line-height: 20px; }
+.ex-tree-select { position: absolute; z-index: 3000; padding: .5rem; background-color: #fff; border: 1px solid #ddd; box-shadow: 0,0,5px rgba(0,0,0,.45); }
+.ex-tree-dom { width: 220px; height: 180px; }
+
+
+/*深圳沃特玛 tips*/
+.ex-maptip-wtm { width: 40rem; }
+.ex-maptip-wtm.demo { position: absolute; z-index: 2020; width: 39rem; border-radius: 4px; border: 1px solid #f9f9f9; box-shadow: 0px 3px 10px -2px #5A5A5A; }
+.ex-maptip-wtm.demo:after { position: absolute; bottom: -7px; left: 49%; display: inline-block !important; border-right: 9px solid transparent; border-left: 9px solid transparent; content: ''; border-top: 9px solid #fff; border-top-color: #fff; }
+.ex-maptip-wtm-content { position: relative; height: 23rem; color: #fff; background: #3AB0EE; border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.ex-maptip-wtm-content a.ex-maptip-wtm-close { position: absolute; right: 5px; top: 3px; font-size: 3rem; color: #fff; display: inline-block; height: 22px; line-height: 22px; cursor: pointer; z-index: 2040; }
+.ex-maptip-wtm-content a.ex-maptip-wtm-close:hover { color: #ddd; }
+
+.ex-maptip-wtm .ex-content-info-box { overflow: hidden; padding: .5rem 1.7rem; }
+.ex-maptip-wtm .ex-content-info-box > div { padding: 0 !important; }
+.ex-maptip-wtm .ex-content-info-car > h3 { font-size: 1.5rem; margin: .1rem 0 .7rem; }
+.ex-maptip-wtm .ex-content-info-car > .ex-content-img > img { width: 95%; height: 120px; display: block; }
+.ex-maptip-wtm .ex-content-info-car > ul { padding: 0; margin-top: 0.3rem; }
+.ex-maptip-wtm .ex-content-info-car > ul > li { padding: .3rem 0; }
+.ex-maptip-wtm .ex-content-info-car > ul > li > i { font-size: 1.6rem; display: inline-block; width: 30px; text-align: center; padding-right: 5px; }
+.ex-maptip-wtm .ex-content-info-car > ul > li > span { font-size: 1.4rem; }
+
+.ex-maptip-wtm .ex-content-info-state { }
+.ex-maptip-wtm .ex-content-info-state > ul { }
+.ex-maptip-wtm .ex-content-info-state > ul > li { padding: 6px 0; font-size: 1.3rem; }
+.ex-maptip-wtm .ex-content-info-state > ul > li:first-child { padding: 4px 0 8px; }
+.ex-maptip-wtm .ex-content-info-state > ul > li:first-child > span { font-size: 1.2rem; width: 100%; }
+.ex-maptip-wtm .ex-content-info-state > ul > li > strong { font-weight: normal; vertical-align: top; width: 40%; display: inline-block; }
+.ex-maptip-wtm .ex-content-info-state > ul > li > span { width: 60%; display: inline-block; }
+
+
+
+.ex-maptip-wtm-tool { background: #fff; overflow: hidden; height: 3.5rem; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+.ex-maptip-wtm-tool > ul { height: 100%; padding: .7rem 1rem; }
+.ex-maptip-wtm-tool > ul > li { text-align: center; }
+.ex-maptip-wtm-tool .tool-btn a.ec-btn { background-color: #fff; border: 1px solid #BFBFBF; color: #666; padding: .4rem 1rem; font-size: 1.3rem !important; }
+.ex-maptip-wtm-tool .tool-btn a:hover { background-color: #3AB0EE; border-color: #3AB0EE; color: #fff; }
+.ex-maptip-wtm-tool .tool-state i { font-size: 1.6rem; display: block; margin: 0 auto; width: 36px; height: 28px; line-height: 28px; text-align: center; background-color: #B9B9B9; border-radius: 4px; color: #fff; }
+.ex-maptip-wtm-tool .tool-state i.on { background-color: #5dc02f !important; }
+/*.ex-maptip-wtm-tool .tool-state i.GPS { background: #B9B9B9 url('/Asset/img/state_GPS.png') no-repeat 50% 50%; }*/
+/*.ex-maptip-wtm-tool .tool-state i.ACC { background: #B9B9B9 url('/Asset/img/state_ACC.png') no-repeat 50% 50%; }*/
+/*.ex-maptip-wtm-tool .tool-state i.signal { background: #B9B9B9 url('/Asset/img/state_signal.png') no-repeat 50% 50%; }*/
+/*.ex-maptip-wtm-tool .tool-state i.door { background: #B9B9B9 url('/Asset/img/state_openDoor.png') no-repeat 50% 50%; }*/
+
+
+/*渣土车2.0历史轨迹tips*/
+.ex-maptip-ztc {  }
+.ex-maptip-ztc.demo { position: absolute; z-index: 2020; width: 39rem; border-radius: 4px; border: 1px solid #f9f9f9; box-shadow: 0px 3px 10px -2px #5A5A5A; }
+.ex-maptip-ztc.demo:after { position: absolute; bottom: -7px; left: 49%; display: inline-block !important; border-right: 9px solid transparent; border-left: 9px solid transparent; content: ''; border-top: 9px solid #fff; border-top-color: #fff; }
+.ex-maptip-ztc-content { position: relative; /*height: 14rem;*/ color: #fff; background: #3AB0EE; border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.ex-maptip-ztc-content a.ex-maptip-ztc-close { position: absolute; right: 5px; top: 3px; font-size: 3rem; color: #fff; display: inline-block; height: 22px; line-height: 22px; cursor: pointer; z-index: 2040; }
+.ex-maptip-ztc-content a.ex-maptip-ztc-close:hover { color: #ddd; }
+
+.ex-maptip-ztc .ex-content-info-box { overflow: hidden; /*padding: .5rem 1.7rem;*/ background: rgb(58, 176, 238);color:#fff}
+.ex-maptip-ztc .ex-content-info-box > div { padding: 0 !important; }
+.ex-maptip-ztc .ex-content-info-box > ul > li { padding: 6px 0; font-size: 1.3rem; }
+.ex-maptip-ztc .ex-content-info-box > ul > li:first-child { padding: 4px 0 8px; }
+.ex-maptip-ztc .ex-content-info-box > ul > li:first-child > span { font-size: 1.2rem; width: 100%; }
+.ex-maptip-ztc .ex-content-info-box > ul > li > strong { font-weight: normal; vertical-align: top; width: 30%; display: inline-block; }
+.ex-maptip-ztc .ex-content-info-box > ul > li > span { width: 70%; display: inline-block; }
+
+
+
+.ex-maptip-ztc-tool { background: #fff; overflow: hidden; height: 3.5rem; border-bottom-left-radius: 4px; border-bottom-right-radius: 4px; }
+.ex-maptip-ztc-tool > ul { height: 100%; padding: .7rem 1rem; }
+.ex-maptip-ztc-tool > ul > li { text-align: center; }
+.ex-maptip-ztc-tool .tool-btn a.ec-btn { background-color: #fff; border: 1px solid #BFBFBF; color: #666; padding: .4rem 1rem; font-size: 1.3rem !important; }
+.ex-maptip-ztc-tool .tool-btn a:hover { background-color: #3AB0EE; border-color: #3AB0EE; color: #fff; }
+.ex-maptip-ztc-tool .tool-state i { font-size: 1.6rem; display: block; margin: 0 auto; width: 36px; height: 28px; line-height: 28px; text-align: center; background-color: #B9B9B9; border-radius: 4px; color: #fff; }
+.ex-maptip-ztc-tool .tool-state i.on { background-color: #5dc02f !important; }
+/*.ex-maptip-ztc-tool .tool-state i.GPS { background: #B9B9B9 url('/Asset/img/state_GPS.png') no-repeat 50% 50%; }*/
+/*.ex-maptip-ztc-tool .tool-state i.ACC { background: #B9B9B9 url('/Asset/img/state_ACC.png') no-repeat 50% 50%; }*/
+/*.ex-maptip-ztc-tool .tool-state i.signal { background: #B9B9B9 url('/Asset/img/state_signal.png') no-repeat 50% 50%; }*/
+/*.ex-maptip-ztc-tool .tool-state i.door { background: #B9B9B9 url('/Asset/img/state_openDoor.png') no-repeat 50% 50%; }*/
+
+/*#MapShowDetail{width: 100%}*/
+.track-marker{cursor: pointer}
+
+/*车辆列表样式*/
+.carlist-btn.ex-vehicle-list-3{ width: auto;text-align: center;min-width: 32%;}
+.carlist-btn.ex-vehicle-list-4{ width: auto;text-align: center;min-width: 22%;}
+.carlist-btn.ex-vehicle-list-4 a.ec-btn, .carlist-btn.ex-vehicle-list-3 a.ec-btn{padding: 0.3em; width: 99%}

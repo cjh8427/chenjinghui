@@ -1,0 +1,15 @@
+﻿{
+    "id": 1025,
+    "account": "ximoo",
+    "name": null,
+    "sex": 1,
+    "email": null,
+    "token": "5bcfa8e4fa52448ea4941fae6eff928f",
+    "userGuid": "5bcfa8e4fa52448ea4941fae6eff928f",
+    "spell": null,
+    "deptId": 1,
+    "deptName": "ximoo",
+    "roleName": "ximoo",
+    "roleId": 1,
+    "phone": null
+}

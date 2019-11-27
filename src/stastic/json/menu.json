@@ -1,0 +1,736 @@
+﻿{
+  "code": 1,
+  "detail": [
+    {
+      "id": 1,
+      "title": "智能分析",
+      "pid": null,
+      "url": "/behavior",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 12,
+          "title": "大数据分析概览",
+          "pid": 1,
+          "url": "/overview",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 11,
+          "title": "驾驶员驾驶行为报警监控",
+          "pid": 1,
+          "url": "/analysis/behaviorDriver",
+          "target":"_blank",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 13,
+          "title": "建筑垃圾流向智能分析",
+          "pid": 1,
+          "url": "/analysis/spoilMigrate",
+          "target":"_blank",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 15,
+          "title": "城市工地门禁智能监控与环境污染分析",
+          "pid": 1,
+          "url": "/analysis/siteGuard",
+          "target":"_blank",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 16,
+          "title": "环卫系统上报数据处理分析及统计",
+          "pid": 1,
+          "url": "/analysis/sanitationMonitor",
+          "target":"_blank",
+          "iconClass": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "视频管理",
+      "pid": null,
+      "url": "/monitorManage",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 21,
+          "title": "车载视频监管",
+          "pid": 2,
+          "url": "/monitorManage/truckCamera",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 22,
+          "title": "中转站视频监管",
+          "pid": 1859,
+          "url": "/monitorManage/turnCamera",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 23,
+          "title": "医废垃圾视频监管",
+          "pid": 1859,
+          "url": "/monitorManage/medicalCamera",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 24,
+          "title": "垃圾处置通用视频监管",
+          "pid": 1859,
+          "url": "/monitorManage/trashCamera",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 25,
+          "title": "工地视频",
+          "pid": 1859,
+          "url": "/monitorManage/siteCamera",
+          "iconClass": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "环境监测",
+      "pid": null,
+      "url": "/envManage",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 31,
+          "title": "环境监控",
+          "pid": 3,
+          "url": "/envManage/envMapMonitor",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 321,
+          "title": "PM2.5统计",
+          "pid": 32,
+          "url": "/envManage/pmManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 322,
+          "title": "噪音统计",
+          "pid": 32,
+          "url": "/envManage/noiseManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 33,
+          "title": "历史数据查询",
+          "pid": 3,
+          "url": "/envManage/hisDataManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 34,
+          "title": "站点管理",
+          "pid": 3,
+          "url": "/envManage/siteManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 35,
+          "title": "设备监控",
+          "pid": 3,
+          "url": "/envManage/deviceManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 36,
+          "title": "短信配置",
+          "pid": 3,
+          "url": "/envManage/smsManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 37,
+          "title": "污染物浓度预警",
+          "pid": 3,
+          "url": "/envManage/pm2Manage",
+          "iconClass": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "环卫作业",
+      "pid": null,
+      "url": "/sanitationManage",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 41,
+          "title": "智慧地图",
+          "pid": 4,
+          "url": "/sanitationManage/sanMapMonitor",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 42,
+          "title": "运营分析",
+          "pid": 4,
+          "url": "/sanitationManage/stasticManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 48,
+          "title": "新能源环卫车电池管理",
+          "pid": 4,
+          "url": "/sanitationManage/newPowerManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 43,
+          "title": "车辆管理",
+          "pid": 4,
+          "url": "/sanitationManage/vehicleManage/clearManage",
+          "iconClass": null,
+          "children": [
+            {
+              "id": 431,
+              "title": "清运车管理",
+              "pid": 43,
+              "url": "/sanitationManage/vehicleManage/clearManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 432,
+              "title": "实时监控",
+              "pid": 43,
+              "url": "/sanitationManage/vehicleManage/vehicleMonitor",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 433,
+              "title": "车辆在线",
+              "pid": 43,
+              "url": "/sanitationManage/vehicleManage/vehicleOnline",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 434,
+              "title": "历史轨迹",
+              "pid": 43,
+              "url": "/sanitationManage/vehicleManage/hisTrack",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 435,
+              "title": "清运监管",
+              "pid": 43,
+              "url": "/sanitationManage/vehicleManage/clearMonitor",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 436,
+              "title": "垃圾点收运监管",
+              "pid": 43,
+              "url": "/sanitationManage/vehicleManage/trashManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 437,
+              "title": "油耗监管",
+              "pid": 43,
+              "url": "/sanitationManage/vehicleManage/oilManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 438,
+              "title": "车辆报警信息",
+              "pid": 4,
+              "url": "/sanitationManage/vehicleManage/alermManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 439,
+              "title": "车辆作业统计",
+              "pid": 4,
+              "url": "/sanitationManage/vehicleManage/taskManage",
+              "iconClass": null,
+              "children": null
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "title": "台账管理",
+          "pid": 4,
+          "url": "/sanitationManage/ledgerManage/turnLedgerManage",
+          "iconClass": null,
+          "children": [
+            {
+              "id": 471,
+              "title": "中转站台账",
+              "pid": 47,
+              "url": "/sanitationManage/ledgerManage/turnLedgerManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 472,
+              "title": "人员台账管理",
+              "pid": 47,
+              "url": "/sanitationManage/ledgerManage/menberManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 473,
+              "title": "垃圾分类台账",
+              "pid": 47,
+              "url": "/sanitationManage/ledgerManage/trashTypeManage",
+              "iconClass": null,
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "建筑渣土",
+      "pid": null,
+      "url": "/wasteManage",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 51,
+          "title": "资质管理",
+          "pid": 5,
+          "url": "/wasteManage/aptitudeManage",
+          "iconClass": null,
+          "children": [
+            {
+              "id": 511,
+              "title": "资质申报管理",
+              "pid": 51,
+              "url": "/wasteManage/aptitudeManage/aptitudeManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 512,
+              "title": "资质审批管理",
+              "pid": 51,
+              "url": "/wasteManage/aptitudeManage/declareManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 513,
+              "title": "处置证核发管理",
+              "pid": 51,
+              "url": "/wasteManage/aptitudeManage/issueManage",
+              "iconClass": null,
+              "children": null
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "title": "基础信息管理",
+          "pid": 5,
+          "url": "/wasteManage/assetsManage",
+          "iconClass": null,
+          "children": [
+            {
+              "id": 521,
+              "title": "企业管理",
+              "pid": 52,
+              "url": "/wasteManage/assetsManage/entManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 522,
+              "title": "车辆管理",
+              "pid": 52,
+              "url": "/wasteManage/assetsManage/vehicleManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 523,
+              "title": "工地管理",
+              "pid": 52,
+              "url": "/wasteManage/assetsManage/siteManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 524,
+              "title": "驾驶员管理",
+              "pid": 52,
+              "url": "/wasteManage/assetsManage/driverManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 525,
+              "title": "消纳点管理",
+              "pid": 52,
+              "url": "/wasteManage/assetsManage/unloadManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 526,
+              "title": "云图管理",
+              "pid": 52,
+              "url": "/wasteManage/assetsManage/gisManage",
+              "iconClass": null,
+              "children": null
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "title": "处置监管",
+          "pid": 5,
+          "url": "/wasteManage/monitorManage/cuteManage",
+          "iconClass": null,
+          "children": [
+            {
+              "id": 535,
+              "title": "工地门禁监管",
+              "pid": 53,
+              "url": "/wasteManage/monitorManage/siteMonitor",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 531,
+              "title": "抓拍管理",
+              "pid": 53,
+              "url": "/wasteManage/monitorManage/cuteManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 532,
+              "title": "工地视频",
+              "pid": 53,
+              "url": "/wasteManage/monitorManage/siteVideo",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 533,
+              "title": "消纳点视频",
+              "pid": 53,
+              "url": "/wasteManage/monitorManage/unloadVideo",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 534,
+              "title": "驾驶员身份识别",
+              "pid": 53,
+              "url": "/wasteManage/monitorManage/driverVideo",
+              "iconClass": null,
+              "children": null
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "title": "运输过程监管",
+          "pid": 5,
+          "url": "/wasteManage/processManage/fenceManage",
+          "iconClass": null,
+          "children": [
+            {
+              "id": 541,
+              "title": "电子围栏管理",
+              "pid": 54,
+              "url": "/wasteManage/processManage/fenceManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 542,
+              "title": "作业全过程监控",
+              "pid": 51,
+              "url": "/wasteManage/processManage/vehicleMonitor",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 543,
+              "title": "违规作业报警统计",
+              "pid": 54,
+              "url": "/wasteManage/processManage/alermStastic",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 544,
+              "title": "道路卡口管理",
+              "pid": 54,
+              "url": "/wasteManage/processManage/bayonetManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 545,
+              "title": "智能考评管理",
+              "pid": 54,
+              "url": "/wasteManage/processManage/reviewManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 546,
+              "title": "智能对接管理",
+              "pid": 54,
+              "url": "/wasteManage/processManage/buttManage",
+              "iconClass": null,
+              "children": null
+            }
+          ]
+        },
+        {
+          "id": 55,
+          "title": "巡查处理",
+          "pid": 5,
+          "url": "/wasteManage/patrolManage/selfManage",
+          "iconClass": null,
+          "children": [
+            {
+              "id": 551,
+              "title": "自助巡查",
+              "pid": 55,
+              "url": "/wasteManage/patrolManage/selfManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 552,
+              "title": "处置点巡查",
+              "pid": 55,
+              "url": "/wasteManage/patrolManage/poiManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 553,
+              "title": "车辆巡查",
+              "pid": 55,
+              "url": "/wasteManage/patrolManage/vehicleManage",
+              "iconClass": null,
+              "children": null
+            },
+            {
+              "id": 554,
+              "title": "其他问题巡查",
+              "pid": 55,
+              "url": "/wasteManage/patrolManage/otherManage",
+              "iconClass": null,
+              "children": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "公厕管理",
+      "pid": null,
+      "url": "/toiletsManage",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 61,
+          "title": "公厕信息",
+          "pid": 6,
+          "url": "/toiletsManage/toiletsManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 62,
+          "title": "自动售纸",
+          "pid": 6,
+          "url": "/toiletsManage/paperManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 63,
+          "title": "流量监测",
+          "pid": 6,
+          "url": "/toiletsManage/flowManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 64,
+          "title": "环境监测",
+          "pid": 6,
+          "url": "/toiletsManage/envManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 65,
+          "title": "广告播放",
+          "pid": 6,
+          "url": "/toiletsManage/adManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 66,
+          "title": "公厕能耗",
+          "pid": 6,
+          "url": "/toiletsManage/powerManage",
+          "iconClass": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "环卫执法",
+      "pid": null,
+      "url": "/lawManage",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 71,
+          "title": "考核标准管理",
+          "pid": 7,
+          "url": "/lawManage/standardManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 72,
+          "title": "移动考核管理",
+          "pid": 7,
+          "url": "/lawManage/mobileManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 73,
+          "title": "考核工单管理",
+          "pid": 7,
+          "url": "/lawManage/orderManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 74,
+          "title": "考核作业评估管理",
+          "pid": 7,
+          "url": "/lawManage/assessManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 75,
+          "title": "考核抽样管理",
+          "pid": 7,
+          "url": "/lawManage/samplingManage",
+          "iconClass": null,
+          "children": null
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "系统管理",
+      "pid": null,
+      "url": "/systemManage",
+      "iconClass": null,
+      "children": [
+        {
+          "id": 81,
+          "title": "用户管理",
+          "pid": 8,
+          "url": "/systemManage/userManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 82,
+          "title": "角色管理",
+          "pid": 8,
+          "url": "/systemManage/roleManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 83,
+          "title": "数据权限管理",
+          "pid": 8,
+          "url": "/systemManage/authorityManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 84,
+          "title": "组织机构",
+          "pid": 8,
+          "url": "/systemManage/sectionManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 85,
+          "title": "标签管理",
+          "pid": 8,
+          "url": "/systemManage/tagManage",
+          "iconClass": null,
+          "children": null
+        },
+        {
+          "id": 86,
+          "title": "登录日志",
+          "pid": 8,
+          "url": "/systemManage/logManage",
+          "iconClass": null,
+          "children": null
+        }
+      ]
+    }
+  ]
+}

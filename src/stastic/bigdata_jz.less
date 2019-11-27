@@ -1,0 +1,472 @@
+// 大数据页面less
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #112166 url('./img/bigData_jz/bigData_bg.jpg') center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+
+@font-face {
+    font-family: "lcrystal";
+    src: url('./font/DS-DIGI.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.amap-logo,
+.amap-copyright {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/*=========Layout===========*/
+
+.ex-screen {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    color: #43f1ff;
+    z-index: 3001;
+
+    .ex-message {
+        cursor: pointer;
+    }
+
+}
+
+.ex-bigdata-tile {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    left: 0;
+    top: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+    color: #6edbff;
+    z-index: 2000;
+    background: url('./img/bigData_jz/tile_bg.png') center no-repeat;
+
+    .ex-bigdata-tile-flip {
+        transform: scaleY(-.5);
+        opacity: .25;
+        position: absolute;
+        width: 100%;
+        top: 20px;
+        text-align: center;
+    }
+
+
+    .ex-bigdata-timer {
+        font-family: "lcrystal";
+        position: absolute;
+        width: 350px;
+        left: 50%;
+        top: 50px;
+        margin-left: -175px;
+        font-size: 18px;
+        line-height: 35px;
+        color: #1990ff;
+        text-align: center;
+    }
+
+
+
+}
+
+.ex-pages-bigdata {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+
+    .amap-info-content {
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        background: #4e85b4;
+        background: linear-gradient(to bottom, #4e85b4 0%, #794aa9 100%);
+
+
+    }
+
+    .amap-info-sharp {
+        border-top: 8px solid #fff !important;
+    }
+
+    .amap-controls {
+        display: block;
+
+        .amap-controlbar {
+            // display: none;
+        }
+
+        &:hover .amap-controlbar {
+            display: block;
+        }
+    }
+
+
+    .ex-bigdata-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 80px;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: flex-end;
+
+
+        .ex-bigdata-side {
+            display: flex;
+            flex-wrap: wrap;
+            width: 320px;
+            height: 100%;
+            margin: 2px;
+            float: left;
+
+            .item {
+                width: 320px;
+                // min-height: calc(~"33.3333% - 6px");
+                // margin:2px;
+                background: rgba(0, 0, 0, .35);
+                position: relative;
+
+                // box-shadow: inset 0 0 55px rgba(0, 127, 234, 0.322);
+                // border: 1px solid #267fea;
+
+                h3 {
+                    position: relative;
+                    width: calc(~"100% - 30px");
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 32px;
+                    // display: inline-block;
+                    height: 36px;
+                    color: #1990ff;
+                    padding: 0 15px;
+                    margin: 0;
+                    background: url('./img/bigData_jz/title_bg.png') left bottom repeat-x;
+                    // background-size: 100% auto;
+                }
+
+                .ex-bigdata-charts {
+                    width: 100%;
+                    height: calc(~"100% - 55px");
+                    position: relative;
+
+                    .charts-tabs {
+                        position: absolute;
+                        top: 15px;
+                        left: 5px;
+                        z-index: 1000;
+                    }
+                }
+
+
+                .corner {
+                    width: 50px;
+                    height: 50px;
+                    overflow: hidden;
+                    background: url('./img/bigData_jz/item_bg.png') center no-repeat;
+                    position: absolute;
+
+                    &.lt {
+                        background-position: 0 0;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    &.rt {
+                        background-position: -50px 0;
+                        right: 0;
+                        top: 0;
+                    }
+
+                    &.lb {
+                        background-position: 0 -50px;
+                        left: 0;
+                        bottom: 0;
+                    }
+
+                    &.rb {
+                        background-position: -50px -50px;
+                        right: 0;
+                        bottom: 0;
+                    }
+
+                }
+
+
+            }
+        }
+
+        .ex-bigdata-main {
+            width: calc(~'50vw - 166px');
+            height: 100%;
+            margin: 2px;
+            float: left;
+            position: absolute;
+            left: 330px;
+            transition: .5s width ease-in-out;
+
+            &.right {
+                left: auto;
+                right: 0;
+            }
+
+            .full-main-btn {
+                position: absolute;
+                top: 7px;
+                left: 10px;
+                z-index: 20;
+                padding: 5px !important;
+                background: none !important;
+                border: none !important;
+                color: #6eb9ff !important;
+            }
+
+            &.full {
+                width: calc(100vw - 330px);
+                position: absolute;
+                right: 0;
+                background: #1d1e4a;
+                z-index: 2000;
+            }
+
+
+            .item {
+                width: calc(~"100% - 4px");
+                // height: calc(~"100% - 20px");
+                // box-shadow: inset 0 0 55px rgba(0, 153, 255, 0.322);
+                background: rgba(0, 0, 0, .35);
+                position: relative;
+                margin: 2px;
+                float: left;
+
+                h3 {
+                    position: relative;
+                    width: calc(~"100% - 30px");
+                    font-size: 16px;
+                    font-weight: bold;
+                    line-height: 32px;
+                    // display: inline-block;
+                    height: 36px;
+                    color: #1990ff;
+                    padding: 0 15px;
+                    margin: 0;
+                    background: url('./img/bigData_jz/title_bg.png') left bottom repeat-x;
+                    // border-top: 1px solid #267fea;
+                    // box-shadow: inset 0 5px 30px rgba(0, 127, 234, 0.822);
+                    // background-size: 100% auto;
+                }
+
+                .ex-bigdata-charts {
+                    width: 100%;
+                    height: calc(~'100% - 36px');
+                    position: relative;
+
+                    .charts-tabs {
+                        position: absolute;
+                        top: 15px;
+                        left: 5px;
+                        z-index: 1000;
+                    }
+
+                }
+
+                .corner {
+                    width: 50px;
+                    height: 50px;
+                    overflow: hidden;
+                    background: url('./img/bigData_jz/item_bg.png') center no-repeat;
+                    position: absolute;
+
+                    &.lt {
+                        background-position: 0 0;
+                        left: 0;
+                        top: 0;
+                    }
+
+                    &.rt {
+                        background-position: -50px 0;
+                        right: 0;
+                        top: 0;
+                    }
+
+                    &.lb {
+                        background-position: 0 -50px;
+                        left: 0;
+                        bottom: 0;
+                    }
+
+                    &.rb {
+                        background-position: -50px -50px;
+                        right: 0;
+                        bottom: 0;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+}
+
+// overflow: hidden;
+.vec-info-box {
+    width: 20vw;
+    font-size: 14px;
+    line-height: 1.9;
+    color: #abc4ff;
+
+    .vec-number {
+        line-height: 1.9;
+        font-weight: bold;
+    }
+
+    .vec-info-img {
+        width: 150px;
+        height: 84px;
+        float: left;
+        margin: 10px;
+    }
+
+    .vec-info-intro {
+        padding: 5px;
+
+        &::after {
+            clear: both;
+        }
+    }
+
+    .vec-info-address {
+        clear: both;
+    }
+
+    .vec-info-control {
+        margin-top: 20px;
+    }
+
+    .vec-detail-content {
+        padding: 5px 15px;
+    }
+
+    .vec-info-state {
+        li {
+            float: left;
+            margin: 5px;
+            width: 24px;
+            height: 24px;
+            list-style: none;
+            background: #5daf34;
+            line-height: 24px;
+            text-align: center;
+            color: #fff;
+            border-radius: 3px;
+            font-size: 18px;
+        }
+
+        &::after {
+            clear: both;
+        }
+    }
+
+
+
+    .el-table tr,
+    .el-table th,
+    .el-table {
+        background-color: transparent !important;
+    }
+
+    .el-table__body tr.hover-row>td,
+    .el-table__body tr.hover-row.current-row>td,
+    .el-table__body tr.hover-row.el-table__row--striped>td,
+    .el-table__body tr.hover-row.el-table__row--striped.current-row>td,
+    .el-table--enable-row-hover .el-table__body tr:hover>td {
+        background-color: #abc4ff30 !important;
+    }
+
+    .el-table th,
+    .el-table td {
+        padding: 5px 0 !important;
+        border-bottom: 1px solid #155cb7;
+        color: #abc4ff !important;
+    }
+
+    .el-tabs__nav-wrap::after {
+        background-color: #155cb7;
+    }
+
+    .el-tabs__active-bar {
+        background-color: #fff;
+    }
+
+    .el-tabs__item {
+        color: #abc4ff !important;
+
+        &.is-active {
+            color: #fff !important;
+        }
+    }
+}
+
+.weather-icon {
+    background: url("img/bigData_jz/weather.png") 0 0 no-repeat;
+    width: 26px;
+    height: 26px;
+    display: block;
+
+    &.icon-01 {
+        background-position: 0 0;
+    }
+
+    &.icon-02 {
+        background-position: -26px 0;
+    }
+
+    &.icon-03 {
+        background-position: -52px 0;
+    }
+
+    &.icon-04 {
+        background-position: -78px 0;
+    }
+
+    &.icon-05 {
+        background-position: 0 -26px;
+    }
+
+    &.icon-06 {
+        background-position: -26px -26px;
+    }
+
+    &.icon-07 {
+        background-position: -52px -26px;
+    }
+}

@@ -1,0 +1,127 @@
+﻿{
+  "code": 1,
+  "detail": [
+    {
+      "id": 92,
+      "text": "太原市",
+      "pid": null,
+      "opened": true,
+      "data": {
+        "pName": null,
+        "id": 92
+      },
+      "children": [
+        {
+          "id": 93,
+          "text": "杏花岭区",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 93
+          },
+          "children": null
+        },
+        {
+          "id": 94,
+          "text": "迎泽区",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 94
+          },
+          "children": null
+        },
+        {
+          "id": 95,
+          "text": "小店区",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 95
+          },
+          "children": null
+        },
+        {
+          "id": 96,
+          "text": "尖草坪区",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 96
+          },
+          "children": null
+        },
+        {
+          "id": 97,
+          "text": "万柏林区",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 97
+          },
+          "children": null
+        },
+        {
+          "id": 98,
+          "text": "晋源区",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 98
+          },
+          "children": null
+        },
+        {
+          "id": 99,
+          "text": "清徐县",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 99
+          },
+          "children": null
+        },
+        {
+          "id": 100,
+          "text": "阳曲县",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 100
+          },
+          "children": null
+        },
+        {
+          "id": 101,
+          "text": "娄烦县",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 101
+          },
+          "children": null
+        },
+        {
+          "id": 102,
+          "text": "古交市",
+          "pid": 92,
+          "opened": false,
+          "data": {
+            "pName": "太原市",
+            "id": 102
+          },
+          "children": null
+        }
+      ]
+    }
+  ]
+}

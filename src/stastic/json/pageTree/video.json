@@ -1,0 +1,29 @@
+﻿{
+  "code": 1,
+  "detail":[{
+    "id": 92,
+    "text": "太原市",
+    "pid": null,
+    "opened": true,
+    "data": null,
+    "children": [{
+      "id": 1,
+      "text": "测试摄像头1",
+      "pid": 93,
+      "opened": false,
+      "data": {
+        "dev_no": "013033332222"
+      },
+      "children": null
+    }, {
+      "id": 2,
+      "text": "测试摄像头2",
+      "pid": 93,
+      "opened": false,
+      "data": {
+        "dev_no": "018080100022"
+      },
+      "children": null
+    }]
+  }]
+}

@@ -1,0 +1,220 @@
+﻿{
+  "code": 1,
+  "detail": {
+    "gridCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "muneId": 10,
+          "title": "企业名称",
+          "key": "EnterpriseName",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": "1,1,0,1"
+        },
+        {
+          "id": 5,
+          "muneId": 10,
+          "title": "企业简称",
+          "key": "Abbreviation",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": ""
+        },
+        {
+          "id": 6,
+          "muneId": 10,
+          "title": "违规次数",
+          "key": "VehCount",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 7,
+          "muneId": 10,
+          "title": "最后得分",
+          "key": "ModifyUserId",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 8,
+          "muneId": 10,
+          "title": "修改时间",
+          "key": "ModifyTime",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        }
+      ],
+      "button": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "searchCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "label": "企业名称",
+          "type": "input",
+          "name": "EnterpriseName",
+          "value": null,
+          "option": null
+        }
+      ],
+      "button": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "modalCfg": {
+      "button": [
+        "0",
+        "0"
+      ],
+      "cfg": [
+        {
+          "id": 10,
+          "text": "移动考核管理",
+          "pid": null,
+          "opened": true,
+          "data": {
+            "id": 10,
+            "panelId": 10,
+            "menuId": 10,
+            "pid": null,
+            "label": "移动考核管理",
+            "type": null,
+            "name": "移动考核管理",
+            "value": null,
+            "dicType": null,
+            "isDefault": null,
+            "isReq": null,
+            "sortId": 10
+          },
+          "children": [
+            {
+              "id": 1,
+              "text": "Account",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 1,
+                "panelId": 1,
+                "menuId": 10,
+                "pid": 10,
+                "label": "企业名称",
+                "type": "input",
+                "name": "EnterpriseName",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 1
+              },
+              "children": null
+            },
+            {
+              "id": 2,
+              "text": "EnterpriseName",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 2,
+                "panelId": 2,
+                "menuId": 10,
+                "pid": 10,
+                "label": "企业简称",
+                "type": "input",
+                "name": "Abbreviation",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 2
+              },
+              "children": null
+            },
+            {
+              "id": 3,
+              "text": "Sex",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 3,
+                "panelId": 3,
+                "menuId": 10,
+                "pid": 10,
+                "label": "违规次数",
+                "type": "input",
+                "name": "VehCount",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 3
+              },
+              "children": null
+            },
+            {
+              "id": 4,
+              "text": "Phone",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "最后得分",
+                "type": "input",
+                "name": "ModifyUserId",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            }
+          ]
+        }
+      ],
+      "show": false,
+      "rule": {
+        "name": [
+          {
+            "trigger": "blur",
+            "message": "机构名称不能为空",
+            "required": true
+          }
+        ],
+        "shortName": [
+          {
+            "trigger": "blur",
+            "message": "机构简称不能为空",
+            "required": true
+          }
+        ]
+      },
+      "title": "移动考核管理"
+    },
+    "pageCfg": {
+      "treeTitle": "地区/位置",
+      "tree": "dept"
+    }
+  }
+}

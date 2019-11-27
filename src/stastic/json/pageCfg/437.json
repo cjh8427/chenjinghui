@@ -1,0 +1,290 @@
+﻿{
+  "code": 1,
+  "detail": {
+    "gridCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "muneId": 10,
+          "title": "车牌号",
+          "key": "VehicleNo",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": "1,1,0,1"
+        },
+        {
+          "id": 5,
+          "muneId": 10,
+          "title": "所属垃圾点",
+          "key": "EnterpriseName",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": ""
+        },
+        {
+          "id": 6,
+          "muneId": 10,
+          "title": "驾驶员",
+          "key": "LegalName",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 6,
+          "muneId": 10,
+          "title": "驾驶员电话",
+          "key": "LegalPhone",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 6,
+          "muneId": 10,
+          "title": "所属区域",
+          "key": "DistName",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 7,
+          "muneId": 10,
+          "title": "累计油耗",
+          "key": "ResourceTypeId",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 8,
+          "muneId": 10,
+          "title": "设备安装",
+          "key": "AzStatusStr",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        }
+      ],
+      "button": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "searchCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "label": "车牌号",
+          "type": "input",
+          "name": "EnterpriseName",
+          "value": null,
+          "option": null
+        },
+        {
+          "id": 1,
+          "label": "查询时间",
+          "type": "datepicker",
+          "name": "CreateTime",
+          "value": null,
+          "option": null
+        }
+      ],
+      "button": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "modalCfg": {
+      "button": [
+        "0",
+        "0"
+      ],
+      "cfg": [
+        {
+          "id": 10,
+          "text": "资质申报管理",
+          "pid": null,
+          "opened": true,
+          "data": {
+            "id": 10,
+            "panelId": 10,
+            "menuId": 10,
+            "pid": null,
+            "label": "资质申报管理",
+            "type": null,
+            "name": "资质申报管理",
+            "value": null,
+            "dicType": null,
+            "isDefault": null,
+            "isReq": null,
+            "sortId": 10
+          },
+          "children": [
+            {
+              "id": 1,
+              "text": "EnterpriseName",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 1,
+                "panelId": 1,
+                "menuId": 10,
+                "pid": 10,
+                "label": "企业名称",
+                "type": "input",
+                "name": "EnterpriseName",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 1
+              },
+              "children": null
+            },
+            {
+              "id": 2,
+              "text": "Abbreviation",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 2,
+                "panelId": 2,
+                "menuId": 10,
+                "pid": 10,
+                "label": "企业简称",
+                "type": "input",
+                "name": "Abbreviation",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 2
+              },
+              "children": null
+            },
+            {
+              "id": 3,
+              "text": "LegalName",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 3,
+                "panelId": 3,
+                "menuId": 10,
+                "pid": 10,
+                "label": "负责人",
+                "type": "input",
+                "name": "LegalName",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 3
+              },
+              "children": null
+            },
+            {
+              "id": 3,
+              "text": "LegalPhone",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 3,
+                "panelId": 3,
+                "menuId": 10,
+                "pid": 10,
+                "label": "负责人电话",
+                "type": "input",
+                "name": "LegalPhone",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 3
+              },
+              "children": null
+            },
+            {
+              "id": 3,
+              "text": "ReportVehCount",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 3,
+                "panelId": 3,
+                "menuId": 10,
+                "pid": 10,
+                "label": "申报车辆数",
+                "type": "input",
+                "name": "ReportVehCount",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 3
+              },
+              "children": null
+            },
+            {
+              "id": 4,
+              "text": "CreateTime",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "申报时间",
+                "type": "input",
+                "name": "CreateTime",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            }
+          ]
+        }
+      ],
+      "show": false,
+      "rule": {
+        "name": [
+          {
+            "trigger": "blur",
+            "message": "机构名称不能为空",
+            "required": true
+          }
+        ],
+        "shortName": [
+          {
+            "trigger": "blur",
+            "message": "机构简称不能为空",
+            "required": true
+          }
+        ]
+      },
+      "title": "油耗"
+    },
+    "pageCfg": {
+      "treeTitle": "地区/位置",
+      "tree": "dept"
+    }
+  }
+}

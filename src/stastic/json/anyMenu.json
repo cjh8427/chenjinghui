@@ -1,0 +1,37 @@
+{
+  "code": 1,
+  "detail": {
+    "Menu": [
+      {
+        "id": 0,
+        "title": "大数据分析概览",
+        "url": "/overview",
+        "icon": "analysis_icon_overview"
+      },
+      {
+        "id": 1,
+        "title": "建筑垃圾流向智能分析",
+        "url": "/analysis/spoilMigrate",
+        "icon": "analysis_icon_spoilMigrate"
+      },
+      {
+        "id": 2,
+        "title": "城市工地门禁智能监控与环境污染分析",
+        "url": "/analysis/siteGuard",
+        "icon": "analysis_icon_site"
+      },
+      {
+        "id": 3,
+        "title": "驾驶员驾驶行为报警监控",
+        "url": "/analysis/behaviorDriver",
+        "icon": "analysis_icon_beyond"
+      },
+      {
+        "id": 4,
+        "title": "环卫系统上报数据处理分析及统计",
+        "url": "/analysis/sanitationMonitor",
+        "icon": "analysis_icon_sanitationMonitor"
+      }
+    ]
+  }
+}

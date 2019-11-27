@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>实时监控</title>
+    <link rel="stylesheet" href="../css/exsun_layout_map.css">
+    <link rel="stylesheet" href="../css/exsun_layout.css">
+    <link rel="stylesheet" href="../css/exsun_theme.css">
+    <link rel="stylesheet" href="../css/exsun_base.css">
+    <link rel="stylesheet" href="../css/exsun_map.css">
+    <link rel="stylesheet" href="../css/amaze/amazeui.switch.css">
+    <link rel="stylesheet" href="../css/fonts-icon.css">
+    <link rel="stylesheet" href="../css/jquery.nstSlider.min.css">
+
+    <link rel="stylesheet" href="../js/libs/leaflet/leaflet.css">
+</head>
+<body>
+<div class="ex-layout-main ex-layout-content">
+    <script src="../js/libs/hostUrl.js"></script>
+    <script src="../js/libs/leaflet/leaflet-src.js"></script>
+    <script src="../js/libs/jquery-1.9.1.min.js"></script>
+
+    <script src="../js/libs/ESLib-src.js"></script>
+    <script src="../js/libs/MapLib-src.js"></script>
+    <script src="../js/libs/jstree.js"></script>
+    <script src="../js/libs/jquery.dtGrid.js"></script>
+    <script src="../js/libs/leaflet.markercluster-src.js"></script>
+    <script src="../js/libs/leaflet.draw.js"></script>
+
+    <script src="../js/libs/amazeui.chosen.js"></script>
+    <script src="../js/libs/amazeui.js"></script>
+    <script src="../js/libs/amazeui.switch.min.js"></script>
+
+    <script src="../js/libs/echarts.min.js"></script>
+    <script src="../js/page/CloudMap-2.4.0-src.js"></script>
+    <script src="../js/libs/MovingMarker.js"></script>
+    <script src="../js/libs/jquery-dialog-plus.js"></script>
+
+    <script src="../js/libs/amazeui.datetimepicker.js"></script>
+    <script src="../js/libs/zh-cn.js"></script>
+
+    <script>
+        // var m_Url = 'http://api.prebdlbs.comlbs.com' // 预发布
+        var m_Url = 'http://api.bdlbs.comlbs.com' // 接口地址
+        var m_oParam = ES.Util.getArgs(); // 获取token参数
+        var m_getList = m_Url + '/cloudmap/regionDetail'; // 请求云图列表
+        var m_districtTree = m_Url + '/Department/DistrictTree' // 弹窗的部门树
+        var m_postUrl = m_Url + '/cloudmap/regionEdit' // 修改云图区域接口
+        var m_addPostUrl = m_Url + '/cloudmap/regionInsert' // 新增云图区域接口
+        var m_deletePostUrl = m_Url + '/cloudmap/regionDelete' // 删除云图区域接口
+        var m_transAddressUrl = m_Url + '/Common/ToGpsLngLatGaoDe' // 转换高德地图地址
+
+        ES.cloudMap = function () {
+
+            var nMapHeight = $(window).height();
+            var nMapWidth = $(window).width();
+
+            // 页面通信参数
+            var oPage = new ES.CloudMap.Page('MapView', {})
+
+            // 容器内容布局
+            var oLayoutContent = new ES.CloudMap.LayoutContent(oPage, { nWidth: nMapWidth, nHeight: nMapHeight });
+
+            // 地图布局
+            var oMapLayout = new ES.MapControl.Layout(oPage, {
+                cDidId: 'MapView',
+                cHTML:  '<div  class="ex-layout-map-content">' +
+                '       <div class="ex-layout-type-wbox ex-map-bottom"></div>' +
+                '       <div class="ex-layout-maptool ex-theme-maptool ex-map-top ex-map-left  ec-padding-0">   </div>' +
+                '       <div class="ex-layout-maptool ex-theme-maptool ex-map-top"></div>' +
+                '       <div class="ex-layout-monitor-wbox">  </div>' +
+                ' </div>'
+            });
+
+            // 添加paneltree
+            oMapLayout.addToolItem({ cHTML: '<div class = "ex-layout-maptool ex-theme-maptool ex-map-top ex-map-left tree-layout-map" style="margin-top:8rem"> </div>' })
+
+            // 初始化地图控件
+            var oMapMaster = new L.MapLib.MapMaster.Map(oPage, {
+                cDidId: 'MapView',
+                oMapOption: {
+                    zoomControl: false,
+                    layers: [],
+                    center: new L.LatLng(30.574529, 114.296265),//经度:114.296265,纬度:30.574529
+                    zoom: 12
+                },
+                //瓦片参数
+                oTileOption: {
+                    maxZoom: 18,
+                    minZoom: 3,
+                    attribution: 'Map &copy;GB-20263—2018 <a target="_blank" href="#">武汉依迅</a> '
+                },
+                nMapWidth: nMapWidth,
+                nMapHeight: nMapHeight
+            });
+
+            // 加载地图
+            oMapMaster.loadMapMaster();
+
+            var oToolBox = new ES.MapControl.ESMapToolBox(oMapMaster, {
+                acParentDivClass: ["ex-layout-maptool", "ex-theme-maptool", "ex-map-top", "ex-map-right"],
+                oUIConfig: {
+                    div: {
+                        'class': 'ex-maptool-box ex-control-dropmenu',
+                        i: { 'class': 'ec-icon-briefcase' },
+                        html: '&nbsp;&nbsp;',
+                        span: { html: '工具' },
+                        i11: { 'class': 'ec-icon-angle-down' },
+                        ul: {
+                            'class': 'ec-avg-sm-1 ec-dropdown-content',
+                            li: [{
+                                a: {
+                                    href: 'javascript:void(0);',
+                                    i: { 'class': 'ex-icon-maptool ex-maptool-china' },
+                                    html: '&nbsp;全国'
+                                }
+                            },
+                                {
+                                    a: {
+                                        href: 'javascript:void(0);',
+                                        i: { 'class': 'ex-icon-maptool ex-maptool-range' },
+                                        html: '&nbsp;测距'
+                                    }
+                                },
+                                {
+                                    a: {
+                                        href: 'javascript:void(0);',
+                                        i: { 'class': 'ex-icon-maptool ex-maptool-area' },
+                                        html: '&nbsp;测面'
+                                    }
+                                },
+                                {
+                                    a: {
+                                        href: 'javascript:void(0);',
+                                        i: { 'class': 'ex-icon-maptool ex-maptool-scale-big' },
+                                        html: '&nbsp;拉框放大'
+                                    }
+                                },
+                                {
+                                    a: {
+                                        href: 'javascript:void(0);',
+                                        i: { 'class': 'ex-icon-maptool ex-maptool-scale-small' },
+                                        html: '&nbsp;拉框缩小'
+                                    }
+                                },
+                                {
+                                    a: {
+                                        href: 'javascript:void(0);',
+                                        i: { 'class': 'ex-icon-maptool ex-maptool-location' },
+                                        html: '&nbsp;坐标查询'
+                                    }
+                                },
+                            ]
+                        }
+                    }
+                },
+            });
+            var oToolTile = new ES.MapControl.ESMapTile(oMapMaster, {
+                acParentDivClass: ["ex-layout-maptool", "ex-theme-maptool", "ex-map-top", "ex-map-right"],
+                oUIConfig: {
+                    div: {
+                        'class': 'ex-maptool-box ex-control-dropmenu  map-tile',
+                        i: { 'class': 'ec-icon-clone' },
+                        html: '&nbsp;&nbsp;',
+                        span: { html: '高德地图' },
+                        i11: { 'class': 'ec-icon-angle-down' },
+                        ul: {
+                            'class': 'ec-avg-sm-1 ec-dropdown-content',
+                            li: [{ a: { href: 'javascript:void(0);', html: '高德地图' } },
+                                { a: { href: 'javascript:void(0);', html: '高德卫星图' } },
+                                { a: { href: 'javascript:void(0);', html: '谷歌地图' } },
+                                { a: { href: 'javascript:void(0);', html: '谷歌卫星图' } },
+                                { a: { href: 'javascript:void(0);', html: '谷歌地形图' } },
+                                { a: { href: 'javascript:void(0);', html: '灰度图' } }
+                            ]
+                        }
+                    }
+                },
+            });
+            // var oToolSearch = new ES.MapControl.ESMapSearch(oMapMaster, {
+            //     acParentDivClass: ['ex-layout-maptool', 'ex-theme-maptool', 'ex-map-top', 'ex-map-right'],
+            //     cUrl: '/CloudMap/PoiSearch'
+            // });
+
+            var oMenuTool = new ES.CloudMap.MenuTool(oPage, {});
+            var oGridMenu = new ES.CloudMap.GridMenu(oPage, {});
+            var oLineItem = new ES.CloudMap.LineMenu(oPage, {});
+            var oNCItem = new ES.CloudMap.NationalCtrlMenu(oPage, {});
+
+            var oRCItem = new ES.CloudMap.RegionCtrlMenu(oPage, {});
+
+            oMenuTool.appendMenu(oGridMenu);
+
+            // 添加第一项
+            // oMenuTool.appendMenu(oLineItem);
+
+            // // 添加第二项 国控点
+            // oMenuTool.appendMenu(oNCItem);
+            //
+            // // 添加第三项 国控点
+            // oMenuTool.appendMenu(oRCItem);
+
+            $(window).resize(
+                function () {
+                    var nHeight = $(window).height();
+                    var nWidth = $(window).width();
+                    oMapMaster.reflesh(nWidth, nHeight);
+                    oLayoutContent.reflesh(nWidth, nHeight);
+                    // 广播消息
+                    oPage.fire('window:resize');
+                });
+
+        };
+
+        // 开始执行的地方
+        $(function () {
+            // 地图控件相关配置
+            ES.MapControl.Config = {
+                // 地图中心点配置
+                oRegionConfig: {
+                    cSwitchName: '区域',
+                    cDefaultCityName: '南昌市',
+                    dLng: 115.89,
+                    dLat: 28.68,
+                    // 地图显示的乘积
+                    nLevel: 15,
+                },
+
+                // 地图中心点位置信息
+                oRegionRep: {
+                    cUrl: '/MapView/GetRealRegion',
+                    oParam: { nDeptId: 1 }
+                },
+            };
+
+            // 红谷滩 项目的相关配置
+            ES.CloudMap.oConfig = {
+
+                // 工地树 配置
+                PostPos: {
+                    core: {
+                        'animation': 0,
+                        'check_callback': true,
+                        'state': { 'opened': true },
+                        'data': {
+                            'url': '/Line/TreeDept',
+                        }
+                    },
+                    plugins: ['types', 'search', 'unique'],
+                },
+
+                // 当前用户的部门id
+                nDeptId: 1,
+
+
+                // 监控页面获得工地信息
+                cSiteInfoUrl: '/Site/GetSiteInfoByIds',
+
+
+                // 工地颜色配置
+                oSiteConfig: {
+                    stroke: true,
+                    color: '#0FFF05',
+                    dashArray: null,
+                    lineCap: null,
+                    lineJoin: null,
+                    weight: 1,
+                    opacity: 1,
+                    fill: true,
+                    fillColor: null,
+                    fillOpacity: 0.2,
+                    clickable: true,
+                    smoothFactor: 1.0,
+                    noClip: false
+                },
+
+                // 边界颜色配置
+                oBoundConfig: {
+                    stroke: true,
+                    color: '#f75e05',
+                    dashArray: null,
+                    lineCap: null,
+                    lineJoin: null,
+                    weight: 1,
+                    opacity: 0.8,
+                    fill: true,
+                    fillColor: null,
+                    fillOpacity: 0.1,
+                    clickable: true,
+                    smoothFactor: 1.0,
+                    noClip: false
+                },
+
+                // 画线的配置
+                oLiveLineConfig: {
+                    opacity: 1,
+                    color: 'blue',
+                    weight: 1,
+                },
+
+                oLiveCircleMarkerConfig: {
+                    fill: true,
+                    fillColor: '#fff',
+                    radius: 3,
+                    weight: 1,
+                    opacity: 1,
+                    fillOpacity: 1
+                },
+
+                //实时跟踪外层圆的样式
+                oLiveCircleConfig: {
+                    stroke: true,
+                    color: '#FF3300',
+                    dashArray: null,
+                    lineCap: null,
+                    lineJoin: null,
+                    weight: 1,
+                    opacity: 1,
+                    fill: true,
+                    fillColor: null,
+                    fillOpacity: 0.2,
+                    clickable: true,
+                    smoothFactor: 1.0,
+                    noClip: false
+                },
+
+                // 监控车辆个数
+                nMonitorCnt: 10,
+            };
+
+            ES.cloudMap({
+                nUserId: '1001',
+            });
+        });
+
+
+
+    </script>
+</div>
+</body>
+
+</html>

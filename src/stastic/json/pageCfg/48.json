@@ -1,0 +1,691 @@
+﻿{
+  "code": 1,
+  "detail": {
+    "gridCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "muneId": 4,
+          "title": "型号名称",
+          "key": "modelName",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": "1,1,0,1"
+        },
+        {
+          "id": 5,
+          "muneId": 10,
+          "title": "型号编号",
+          "key": "modelNo",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": ""
+        },
+        {
+          "id": 6,
+          "muneId": 4,
+          "title": "电池品牌",
+          "key": "batteryBrand",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 6,
+          "muneId": 4,
+          "title": "BMS版本号",
+          "key": "bmsVersion",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 6,
+          "muneId": 4,
+          "title": "电池规格代码",
+          "key": "batteryModelCode",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 7,
+          "muneId": 4,
+          "title": "串并联方式",
+          "key": "serialParallel",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 8,
+          "muneId": 4,
+          "title": "外形",
+          "key": "shape",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 9,
+          "muneId": 4,
+          "title": "尺寸(mm)",
+          "key": "size",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 10,
+          "muneId": 4,
+          "title": "额定容量(Ah)",
+          "key": "ratedCapacity",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 11,
+          "muneId": 4,
+          "title": "额定质量(kg)",
+          "key": "ratedWeight",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 12,
+          "muneId": 4,
+          "title": "标称电压(V)",
+          "key": "voltage",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 13,
+          "muneId": 4,
+          "title": "标称电流(A)",
+          "key": "current",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 14,
+          "muneId": 4,
+          "title": "能量密度",
+          "key": "density",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 15,
+          "muneId": 4,
+          "title": "充电倍率",
+          "key": "chargePower",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 16,
+          "muneId": 4,
+          "title": "正极材料",
+          "key": "cathode",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 17,
+          "muneId": 4,
+          "title": "负极材料",
+          "key": "negative",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 18,
+          "muneId": 4,
+          "title": "隔膜类型",
+          "key": "septumType",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 19,
+          "muneId": 4,
+          "title": "电解液类型",
+          "key": "electrolyteType",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        },
+        {
+          "id": 20,
+          "muneId": 4,
+          "title": "电池寿命",
+          "key": "batteryLife",
+          "sortable": 1,
+          "align": "center",
+          "width": null,
+          "buttonCfg": null
+        }
+      ],
+      "button": [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "searchCfg": {
+      "cfg": [
+        {
+          "id": 1,
+          "label": "型号名称",
+          "type": "input",
+          "name": "modelName",
+          "value": null,
+          "option": null
+        },
+        {
+          "id": 2,
+          "label": "电池品牌",
+          "type": "input",
+          "name": "batteryBrand",
+          "value": null,
+          "option": null
+        },
+        {
+          "id": 3,
+          "label": "型号编号",
+          "type": "input",
+          "name": "modelNo",
+          "value": null,
+          "option": null
+        }
+      ],
+      "button": [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "modalCfg": {
+      "button": [
+        "0",
+        "0"
+      ],
+      "cfg": [
+        {
+          "id": 10,
+          "text": "新能源环卫车电池管理",
+          "pid": null,
+          "opened": true,
+          "data": {
+            "id": 10,
+            "panelId": 10,
+            "menuId": 10,
+            "pid": null,
+            "label": "新能源环卫车电池管理",
+            "type": null,
+            "name": "新能源环卫车电池管理",
+            "value": null,
+            "dicType": null,
+            "isDefault": null,
+            "isReq": null,
+            "sortId": 10
+          },
+          "children": [
+            {
+              "id": 1,
+              "text": "modelName",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 1,
+                "panelId": 1,
+                "menuId": 10,
+                "pid": 10,
+                "label": "型号名称",
+                "type": "input",
+                "name": "modelName",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 1
+              },
+              "children": null
+            },
+            {
+              "id": 2,
+              "text": "modelNo",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 2,
+                "panelId": 2,
+                "menuId": 10,
+                "pid": 10,
+                "label": "型号编号",
+                "type": "input",
+                "name": "modelNo",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": 1,
+                "sortId": 2
+              },
+              "children": null
+            },
+            {
+              "id": 3,
+              "text": "batteryBrand",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 3,
+                "panelId": 3,
+                "menuId": 10,
+                "pid": 10,
+                "label": "电池品牌",
+                "type": "input",
+                "name": "batteryBrand",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 3
+              },
+              "children": null
+            },
+            {
+              "id": 3,
+              "text": "bmsVersion",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 3,
+                "panelId": 3,
+                "menuId": 10,
+                "pid": 10,
+                "label": "BMS版本号",
+                "type": "input",
+                "name": "bmsVersion",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 3
+              },
+              "children": null
+            },
+            {
+              "id": 3,
+              "text": "batteryModelCode",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 3,
+                "panelId": 3,
+                "menuId": 10,
+                "pid": 10,
+                "label": "电池规格代码",
+                "type": "input",
+                "name": "batteryModelCode",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 3
+              },
+              "children": null
+            },
+            {
+              "id": 4,
+              "text": "serialParallel",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "串并联方式",
+                "type": "input",
+                "name": "serialParallel",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 5,
+              "text": "shape",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "外形",
+                "type": "input",
+                "name": "shape",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 5,
+              "text": "size",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "尺寸(mm)",
+                "type": "input",
+                "name": "size",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 6,
+              "text": "ratedCapacity",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "额定容量(Ah)",
+                "type": "input",
+                "name": "ratedCapacity",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 7,
+              "text": "ratedWeight",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "额定质量(kg)",
+                "type": "input",
+                "name": "ratedWeight",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 8,
+              "text": "voltage",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "标称电压(V)",
+                "type": "input",
+                "name": "voltage",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 9,
+              "text": "current",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "标称电流(A)",
+                "type": "input",
+                "name": "current",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 9,
+              "text": "density",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "能量密度",
+                "type": "input",
+                "name": "density",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 10,
+              "text": "chargePower",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "充电倍率",
+                "type": "input",
+                "name": "chargePower",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 11,
+              "text": "cathode",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "正极材料",
+                "type": "input",
+                "name": "cathode",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 12,
+              "text": "negative",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "负极材料",
+                "type": "input",
+                "name": "negative",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 12,
+              "text": "septumType",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "隔膜类型",
+                "type": "input",
+                "name": "septumType",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 13,
+              "text": "electrolyteType",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "电解液类型",
+                "type": "input",
+                "name": "electrolyteType",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            },
+            {
+              "id": 14,
+              "text": "batteryLife",
+              "pid": 10,
+              "opened": false,
+              "data": {
+                "id": 4,
+                "panelId": 4,
+                "menuId": 10,
+                "pid": 10,
+                "label": "电池寿命",
+                "type": "input",
+                "name": "batteryLife",
+                "value": null,
+                "dicType": null,
+                "isDefault": null,
+                "isReq": null,
+                "sortId": 4
+              },
+              "children": null
+            }
+          ]
+        }
+      ],
+      "show": false,
+      "rule": {
+        "name": [
+          {
+            "trigger": "blur",
+            "message": "机构名称不能为空",
+            "required": true
+          }
+        ],
+        "shortName": [
+          {
+            "trigger": "blur",
+            "message": "机构简称不能为空",
+            "required": true
+          }
+        ]
+      },
+      "title": "新能源环卫车电池管理"
+    },
+    "pageCfg": {
+      "treeTitle": "地区/位置",
+      "tree": null
+    }
+  }
+}
